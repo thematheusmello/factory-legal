@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>SnapRedact privacy policy</title>
+<meta name="description" content="SnapRedact privacy policy">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Matheus Mello · Software</a><nav><a href="../table-export/">GridGrab</a><a href="../contact-extractor/">ContactSift</a><a href="../crate-cram/">Crate Cram</a></nav></div></header>
+<main>
+<h1>SnapRedact privacy policy</h1>
+<p class="muted">Effective date: 8 November 2026 (2026-11-08)</p>
+<p>This policy covers SnapRedact – Full-Page Screenshot &amp; Blur, version 0.1.0, published by Matheus da Silveira Mello, an individual developer based in Portugal. Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a>. SnapRedact is free and requires no account.</p>
+<h2>Page access and local processing</h2>
+<p>Opening the toolbar popup checks the current tab’s URL to determine whether capture is allowed. Choosing a capture injects the bundled helper into that tab and uses Chrome’s screenshot function to capture page pixels. The helper measures the page, handles selection input and, for full-page capture, scrolls the page or a large scrolling panel. It temporarily changes scrolling styles and hides fixed or sticky elements, then attempts to restore them when capture finishes.</p>
+<p>The page title labels the capture. The URL is checked for capture restrictions and is not saved as a separate gallery field. Titles and screenshot pixels may themselves contain URLs or personal information. SnapRedact does not retrieve your browser history or automatically scan other tabs.</p>
+<p>With Auto-blur enabled, the helper reads page text nodes and non-hidden, non-password input and textarea values to find email addresses, phone numbers and plausible card numbers. Only match rectangles are returned for redaction, not the matched text. The screenshots themselves can still contain that text and any other visible information. Password-field exclusion from text scanning does not prevent visible credentials from appearing in a screenshot. Selection and editor pointer and keyboard events support your actions; they are not stored as activity logs.</p>
+<h2>Local gallery and originals</h2>
+<p>Captures are stored in the extension’s IndexedDB database, <code>snapredact</code>, in the <code>captures</code> store. Records include an identifier, title, capture date and time, dimensions, device pixel ratio, capture-region metadata, and image data. Initially they contain raw screenshot frames and any auto-blur rectangles. Raw frames can include pixels outside a selected area before the editor crops and stitches them.</p>
+<p>When the editor successfully opens a capture, it renders the initial image with any auto-blur applied and immediately saves a flattened PNG and thumbnail, replacing the stored raw frames and clearing the stored rectangles. If the editor does not finish loading or saving, the original frames may remain. Without Auto-blur, the initial saved image remains unredacted.</p>
+<p>Manual edits stay in that editor’s memory until you download or copy. Those actions also attempt to replace the stored image and thumbnail with the current flattened result. Closing without exporting does not save subsequent manual edits. The open editor can retain its underlying image and undo history until it closes, even after an edited version is saved. Reopening a saved flattened image does not restore its earlier edit history.</p>
+<p>The gallery retains up to 100 capture records; saving removes older captures beyond that limit. Split full-page captures use multiple records. There is no automatic time-based expiry. Three preferences—default export format, Auto-blur and quick copy—are stored in extension <code>localStorage</code> under <code>format</code>, <code>auto</code> and <code>quick</code>.</p>
+<h2>Deletion and security</h2>
+<p>In Gallery &amp; settings, Delete removes one IndexedDB capture record; Delete all captures clears the capture store after confirmation. These actions do not reset preferences or erase images already loaded in open editors. Close those editors too: exporting from an open editor can save its capture again. Uninstalling removes the extension’s browser-managed local data. Downloads, clipboard copies, backups and anything shared elsewhere must be managed separately. Deletion is not a secure disk-erasure guarantee.</p>
+<p>SnapRedact adds no encryption to its IndexedDB or localStorage data. Protection depends on your browser, device and profile security; someone with access to your profile may access captures. Do not rely on blur or pixelation to make sensitive information unrecoverable. Auto-blur can miss content, including images and content it cannot read, and can produce false matches. Review exports and prefer solid Cover or Crop for sensitive details.</p>
+<h2>Permissions and transfers</h2>
+<p>The manifest requests <code>activeTab</code> for temporary access to the tab you invoke it on and screenshots, <code>scripting</code> for the bundled capture helper, and <code>unlimitedStorage</code> for large local captures. This does not mean unlimited disk space. It requests no host permissions and declares no automatic content scripts.</p>
+<p>The packaged extension has no network request, analytics, advertising, tracking or remote-code functionality. Its extension-page content security policy blocks network connections. It does not upload screenshots or metadata to the publisher or third parties. Normal website activity, including activity triggered by scrolling, and Chrome installation and updates are handled separately by the website or browser.</p>
+<p>Downloading writes a locally generated file through the browser; copying writes a PNG image to the system clipboard without reading it. Quick copy opens the editor, copies and closes when successful, bypassing manual review. Neither downloading nor copying inherently sends data off your device, but other apps, clipboard services and your later sharing may do so.</p>
+<h2>Limited use disclosure</h2>
+<p>SnapRedact uses data accessed through Chrome APIs only to provide its user-facing capture, redaction, annotation, export and local-gallery features. It does not sell that data, use it for advertising, profiling, creditworthiness or lending, or transfer it to the publisher or third parties. The publisher has no access to locally handled content and does not read it. You control any later sharing of exported images. This describes the extension’s limited use of data under the Chrome Web Store User Data Policy.</p>
+<h2>Support and your rights</h2>
+<p>If you email support, the publisher receives what you choose to send and uses it to respond and resolve your request, retaining it only as necessary for that purpose or legal obligations. Please send only information needed for support and that you are entitled to share. Locally stored captures cannot be accessed or deleted remotely by the publisher.</p>
+<p>Contact <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a> to request access, correction, deletion, restriction, objection or portability for personal data held by the publisher, where applicable. You may complain to Portugal’s Comissão Nacional de Proteção de Dados (<a href="https://www.cnpd.pt">CNPD</a>) or your local supervisory authority.</p>
+<h2>Children and changes</h2>
+<p>SnapRedact is not directed at children under 13. Updated data-handling practices will be reflected on this page with a new effective date.</p>
+<p><a href="index.html">SnapRedact</a> · <a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a></p>
+<footer>Published by Matheus da Silveira Mello, individual developer, Portugal · Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a></footer>
+</main>
+</body>
+</html>
