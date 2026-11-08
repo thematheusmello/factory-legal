@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MetaLens privacy policy</title>
+<meta name="description" content="MetaLens privacy policy">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Matheus Mello · Software</a><nav><a href="../table-export/">GridGrab</a><a href="../contact-extractor/">ContactSift</a><a href="../crate-cram/">Crate Cram</a></nav></div></header>
+<main>
+<h1>MetaLens privacy policy</h1>
+<p>Publisher: Matheus da Silveira Mello<br />
+Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a><br />
+Effective date: 8 November 2026<br />
+Applies to: MetaLens – On-Page SEO Checker 0.2.0 for Firefox desktop.</p>
+<p><strong>Summary.</strong> MetaLens 0.2.0 audits the page you are viewing inside your browser. The audit sends nothing. One optional feature, Check headers, sends a single request for the audited page to that page's own website, and only when you press its button. MetaLens never sends anything to us or to any other third party, and has no analytics, telemetry, advertising or account.</p>
+<p><strong>The page audit (no network).</strong> When you click the MetaLens toolbar button or Audit page, MetaLens reads the page in the active tab: its address, title, meta tags, headings, image addresses and alt text, link addresses and text, structured data (JSON-LD and microdata) and language alternates. It also counts words in the page text. This happens on your device. Page content can include personal or confidential information; it stays in the MetaLens window unless you save, copy or print it. MetaLens does not read your browsing history, cookies, passwords or form entries. Frames and private windows are not audited.</p>
+<p><strong>Check headers (optional, one request to the audited site).</strong> In the HTTP section, the Check headers button asks the audited website for the page again and shows its indexing headers (status, X-Robots-Tag, Link and Location). Before you press it, MetaLens shows exactly what will be sent.</p>
+<ul>
+<li>Recipient: only the audited page's own site (same scheme, host and port). Never the publisher or any third party.</li>
+<li>What is sent: a GET request for the page's address, including its path and query string. Any #fragment and any user name or password in the address are removed first. Your browser adds its standard request headers (such as user agent, accepted languages and formats, and no-cache directives), and the site sees your IP address.</li>
+<li>What is not sent: cookies, sign-in (HTTP authentication) details, the referring page, or any page content or audit results. Cookies the site tries to set in its answer are ignored.</li>
+<li>Redirects are never followed; MetaLens reports that a redirect occurred. Your browser may hide the redirect's target.</li>
+<li>When you first use it on a site, your browser asks you to allow MetaLens access to that site. In Firefox this covers the site's host on every port. Allowing access does not start any automatic checks; every request needs a button press. You can see and remove allowed sites in MetaLens settings.</li>
+<li>Private or signed-in pages: because no cookies are sent, the answer can differ from what you see, for example a redirect to a sign-in page. If the address contains a query string, MetaLens warns you that it is sent to the site again. Query strings can contain session or sign-in tokens, and opening a one-time link again can repeat its action. Plain HTTP requests are not encrypted.</li>
+<li>The site may log the request under its own privacy policy, as it does for any visit.</li>
+</ul>
+<p><strong>Storage.</strong> Your length thresholds are kept in the browser's local extension storage until you change them, clear extension data or uninstall MetaLens. Data from older versions (such as old usage counters) is deleted on update. The current audit lives in the MetaLens popup's memory and disappears when the popup closes. Print / PDF passes the audit to a report tab through temporary session storage under a random key. That copy is deleted as soon as the report is shown, and otherwise when the browser closes or the extension is reloaded or removed. The report stays in its tab until you close it. Nothing is synchronised across devices.</p>
+<p><strong>Your files and clipboard.</strong> CSV, JSON and Markdown files are created only when you ask for them, and saved where your browser saves downloads. Copy links as CSV puts link data on your clipboard. Printing and PDF saving use your browser and operating system. These copies can contain page information, and you control where you keep or share them. Uninstalling MetaLens does not delete them.</p>
+<p><strong>Your choices.</strong> You can audit and export without ever using Check headers. You can remove site access in MetaLens settings, clear extension data, or uninstall the extension. Questions and privacy requests: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a>. Information you include in a support message is handled outside the extension and used only to answer you; MetaLens sends no support messages automatically.</p>
+<p><strong>Support emails.</strong> If you email us, we keep your message and address only as long as needed to handle your request, and delete them within 12 months.</p>
+<p><strong>Changes.</strong> If this policy changes, the effective date above will be updated.</p><p><a href="index.html">MetaLens</a> · <a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a></p>
+<footer>Published by Matheus da Silveira Mello, individual developer, Portugal · Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a></footer>
+</main>
+</body>
+</html>
