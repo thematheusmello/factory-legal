@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Duskthread Glide privacy policy</title>
+<meta name="description" content="Duskthread Glide privacy policy">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Matheus Mello · Software</a><nav aria-label="Game legal pages"><a href="index.html">Duskthread Glide</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="credits.html">Credits</a></nav></div></header>
+<main>
+<h1>Duskthread Glide privacy policy</h1>
+<p class="muted">Effective date: 8 November 2026</p>
+<p>Duskthread Glide is published by Matheus da Silveira Mello. For privacy or support questions, write to <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a>.</p>
+<h2>Summary</h2>
+<ul>
+<li>The game has no game account, chat, user-generated content or online leaderboard.</li>
+<li>Game code contains no separate analytics or tracking service. The inspected build does load CrazyGames SDK v3 from an external server.</li>
+<li>Progress and settings are saved through the CrazyGames SDK in this build.</li>
+<li>Gameplay does not request ads. Hosting services and their SDKs have their own data practices.</li>
+</ul>
+<h2>Save data</h2>
+<p>The game stores music and sound settings, motion preference, vibration preference, completed courses, selected palette, best scores and furthest progress by mode and assist setting, attempt count, completion-screen status, lifetime distance, spools and runs, and an unfinished run with its route and state so you can continue. Daily score and reach records are each limited to the latest 180 keys. The serialized save is limited to fewer than 64,000 characters.</p>
+<p>In the inspected build, saves use CrazyGames SDK data storage under the key <code>duskthread-glide</code>. Its storage location and persistence depend on the SDK and hosting environment. Use the host’s data controls or support to manage platform-held data.</p>
+<p>The bundle also contains a browser-storage adapter using <code>localStorage</code> with the same key, but that adapter is not selected by this build. A standalone version using that adapter would save on your device; clearing that site’s browser data would remove its save. This inspected build does not automatically fall back to that adapter if the SDK fails.</p>
+<h2>Network, platforms and ads</h2>
+<p>The HTML requests <code>https://sdk.crazygames.com/crazygames-sdk-v3.js</code>, alongside the local game script and stylesheet. Game code initializes the SDK and sends loading and gameplay start/stop signals, and reads and writes saves through it. No separate game-server requests, cookies, analytics calls or score submissions were found in the game code.</p>
+<p>The adapter includes interstitial and rewarded-ad methods, but no gameplay code calls them and no ad offer is displayed. This does not determine whether the hosting page or external SDK independently shows ads or processes data.</p>
+<p>The external SDK and host may process connection, device, usage or account information under their own policies. Their internal requests, retention and data handling were not verified from the local build. Consult the privacy notice supplied by the platform where you play. A future version for another platform may add that platform’s SDK or save services; those integrations are not present in the inspected files and must be assessed for that version.</p>
+<h2>Device features and language</h2>
+<p>Graphics and textures are drawn in Canvas and inline SVG; music and effects are synthesized with Web Audio after interaction. Runtime fonts come from the device; the inspected files contain no remote font, image or audio loads.</p>
+<p>Vibration is off by default and is offered only on devices reporting a coarse pointer and supporting the Vibration API. When enabled, it uses short pulses for game events. Motion follows your system’s reduced-motion preference unless changed in settings. The game does not request camera, microphone, location, contacts or notification access.</p>
+<p>Six interface languages are bundled. This build’s adapter returns English; it does not read the browser’s locale or obtain a language setting from CrazyGames.</p>
+<h2>Children</h2>
+<p>The game is intended for a general audience aged 13 and over and is not directed at children.</p>
+<h2>Your rights and contact</h2>
+<p>If you email the publisher, your message and email address are used to answer your request and retained only as long as needed for that purpose. You can request access, correction or deletion of personal data held by the publisher at <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a>. For data held by a hosting platform, use that platform’s privacy controls or support. You may complain to the data protection authority in your country.</p>
+<h2>Changes</h2>
+<p>Updates will appear on this page with a revised effective date. Hosting-specific disclosures should be checked for the version you play.</p>
+<footer>Published by Matheus da Silveira Mello · Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a></footer>
+</main>
+</body>
+</html>
