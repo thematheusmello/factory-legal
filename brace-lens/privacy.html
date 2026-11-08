@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Brace Lens privacy policy</title>
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Matheus Mello · Software</a><nav><a href="../brace-lens/">Brace Lens</a></nav></div></header>
+<main>
+<h1>Brace Lens privacy policy</h1>
+<p class="muted">Effective date: 8 November 2026</p>
+<p>This policy covers the Brace Lens browser extension (“Brace Lens”), published by Matheus Mello, an individual developer based in Portugal. Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a>.</p>
+<h2>Summary</h2>
+<ul>
+<li>Brace Lens collects no personal data. Nothing you view, paste or search is sent to me or to anyone else.</li>
+<li>The extension makes no network requests: no analytics, no advertising, no affiliate links, no remote configuration and no remotely loaded code.</li>
+<li>Brace Lens is free. It has no account, purchase or licence.</li>
+</ul>
+<h2>What the extension reads</h2>
+<p>A small detector runs on pages you open and checks, locally, whether the page is a raw JSON document. On ordinary web pages it stops right away. On JSON pages it parses and displays the content inside your browser. JSON you paste, drop or open in the paste workspace stays in that tab’s memory and is never saved. On a JSON page the parsed value is offered in that tab’s DevTools console as <code>braceLens</code>; the page itself could already read the same text. The extension writes to the clipboard only when you choose a copy action and never reads it.</p>
+<h2>What is stored on your device</h2>
+<p>Your preferences (such as theme and whether automatic detection is on) are saved in the browser’s extension storage on your device. They are not sent to me. Uninstalling the extension removes them.</p>
+<h2>Permissions</h2>
+<p><em>storage</em> saves your preferences. <em>scripting</em> loads the bundled viewer into a tab only after that tab is detected as JSON. The content script on all sites is needed to recognise JSON pages automatically, and it does nothing on other pages. In Firefox only, <em>webRequest</em> and <em>webRequestBlocking</em> let the extension relabel a top-level JSON response as plain text before Firefox’s built-in viewer claims it, so Brace Lens can display it. Nothing is read from, recorded about or added to the request; when automatic viewing is off, responses are left unchanged.</p>
+<h2>Sharing</h2>
+<p>I receive no data from the extension, so nothing is sold, shared or used for advertising.</p>
+<h2>Your rights and changes</h2>
+<p>If you email me, I use your message only to reply, and you may ask me to delete it. Under the GDPR you can also complain to the Portuguese data protection authority (CNPD). If this policy changes, the new version will be posted here with a new effective date.</p>
+</main></body></html>
