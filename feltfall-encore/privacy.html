@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Feltfall Encore privacy policy</title>
+<meta name="description" content="Feltfall Encore privacy policy">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Matheus Mello · Software</a><nav aria-label="Game legal pages"><a href="index.html">Feltfall Encore</a><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a><a href="credits.html">Credits</a></nav></div></header>
+<main>
+<h1>Feltfall Encore privacy policy</h1>
+<p class="muted">Effective date: 8 November 2026</p>
+<p>Feltfall Encore is published by Matheus da Silveira Mello. For privacy or support questions, write to <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a>.</p>
+<h2>Summary</h2>
+<ul>
+<li>The game is single-player. It has no game account, chat, user-generated content or online leaderboard.</li>
+<li>Game code contains no separate analytics or tracking service. The inspected build does load CrazyGames SDK v3 from an external server.</li>
+<li>Progress and settings are saved through the CrazyGames SDK in this build.</li>
+<li>Gameplay does not request ads, and there are no purchases. Hosting services and their SDKs have their own data practices.</li>
+</ul>
+<h2>Save data</h2>
+<p>The game stores unlocked stages; best stars and best clear time per stage, separately for Normal and Assist; death counts and, per stage and mode, the positions of the latest 100 deaths (used only for the results heatmap shown in the game); an unfinished run so Continue can resume it (stage, mode, position, velocity, stage-machinery timers, checkpoint, attempt deaths and hint state); and settings for music, sound effects, reduced motion and haptics. The serialized save is limited to fewer than 64,000 bytes.</p>
+<p>In the inspected build, saves use CrazyGames SDK data storage under the key <code>feltfall-encore</code>. Its storage location and persistence depend on the SDK and hosting environment. Use the host’s data controls or support to manage platform-held data. If a save is unreadable or comes from a newer version, the game does not overwrite it; it plays without saving and shows a short notice.</p>
+<p>The bundle also contains a browser-storage adapter using <code>localStorage</code> with the same key, but that adapter is not selected by this build. A standalone version using that adapter would save on your device; clearing that site’s browser data would remove its save.</p>
+<h2>Network, platforms and ads</h2>
+<p>The HTML requests <code>https://sdk.crazygames.com/crazygames-sdk-v3.js</code>, alongside the local game script and stylesheet. Game code initializes the SDK, sends loading and gameplay start/stop signals, and reads and writes saves through it. No separate game-server requests, cookies, analytics calls or score submissions were found in the game code.</p>
+<p>The adapter includes interstitial and rewarded-ad methods, but no gameplay code calls them and no ad offer is displayed. This does not determine whether the hosting page or external SDK independently shows ads or processes data.</p>
+<p>The external SDK and host may process connection, device, usage or account information under their own policies. Their internal requests, retention and data handling were not verified from the local build. Consult the privacy notice supplied by the platform where you play. A version for another platform may use that platform’s SDK or save services; those integrations must be assessed for that version.</p>
+<h2>Device features and language</h2>
+<p>Scenery, characters and effects are drawn by the game’s own code; music and effects are synthesized with Web Audio. Runtime fonts come from the device; the inspected files contain no remote font, image or audio loads.</p>
+<p>Haptics are off by default. When you turn them on and your device supports the Vibration API, the game uses a short pulse when your character is knocked out. Reduced motion is a setting in the game. The game does not request camera, microphone, location, contacts, clipboard, files or notification access.</p>
+<p>Six interface languages are bundled. This build’s adapter returns English; it does not read the browser’s locale or obtain a language setting from CrazyGames.</p>
+<h2>Children</h2>
+<p>The game is intended for a general audience aged 13 and over and is not directed at children.</p>
+<h2>Your rights and contact</h2>
+<p>If you email the publisher, your message and email address are used to answer your request and retained only as long as needed for that purpose. You can request access, correction or deletion of personal data held by the publisher at <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a>. For data held by a hosting platform, use that platform’s privacy controls or support. You may complain to the data protection authority in your country.</p>
+<h2>Changes</h2>
+<p>Updates will appear on this page with a revised effective date. Hosting-specific disclosures should be checked for the version you play.</p>
+<footer>Published by Matheus da Silveira Mello · Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a></footer>
+</main>
+</body>
+</html>
