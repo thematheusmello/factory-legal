@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Color Tally privacy policy</title>
+<meta name="description" content="Color Tally privacy policy">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Matheus Mello · Software</a><nav aria-label="Legal"><a href="privacy.html">Privacy</a><a href="terms.html">Terms</a></nav></div></header>
+<main>
+<h1>Color Tally privacy policy</h1>
+<p class="muted">Effective November 8, 2026 · Version 0.2.0-free.2</p>
+<p>This policy explains how Color Tally, a Google Sheets Editor add-on provided by Matheus Mello, an individual developer based in Portugal, handles information. Privacy and support contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a>.</p>
+
+<h2>Summary</h2>
+<ul>
+<li>The add-on processes the current spreadsheet through Google Apps Script and displays results in a Google-hosted sidebar.</li>
+<li>The add-on code makes no external runtime requests and sends no spreadsheet data to a developer-operated server. It has no analytics, advertising, tracking pixels, remote scripts, payments or licensing.</li>
+<li>This free version stores no entitlements or per-user usage counters. Saved output definitions are stored with the spreadsheet, as explained below.</li>
+<li>Google platform exception logging remains enabled. This is not a promise that no logs or diagnostics are collected.</li>
+</ul>
+
+<h2>Spreadsheet and sidebar data</h2>
+<p>When you request a tally or summary, the add-on reads cell values and fill or font colors in the range you select or enter. Selection helpers read the selected range or current cell and its colors. The sidebar receives statistics, color summaries, source addresses and saved output settings. Insert preflight checks the destination footprint, whether it contains data, and overlaps with saved outputs. Confirmed inserts and Refresh all write values, notes, summary tables and table formatting. Copy uses your clipboard when you request it.</p>
+<p>These operations run on Google's infrastructure under Google's own terms. The absence of external calls in the add-on code does not mean that processing stays on your device or that Google makes no platform requests.</p>
+
+<h2>Saved definitions and shared spreadsheets</h2>
+<p>The document property <code>color_tally_definitions</code> stores output kind, source and destination A1 references including sheet names, match mode, selected colors, tolerance, statistic, the numbers-as-text option and table size. It does not store source cell values. Sheet names and ranges can nevertheless reveal information about your work.</p>
+<p>Definitions persist with the spreadsheet until removed. Other authorized users who use Color Tally in the same shared file can see and refresh these definitions; they are not private to the person who inserted an output. Spreadsheet copies may carry document properties. Inserted values, notes and tables are ordinary spreadsheet content and follow the file's sharing settings.</p>
+
+<h2>Forget, deletion and retention</h2>
+<p>After confirmation, Forget removes the selected definition from this spreadsheet's document properties and stops Refresh all from updating that output. It leaves the inserted cells unchanged. Forgetting the last output deletes the current definitions property. Delete inserted values, notes and tables separately in Sheets.</p>
+<p>Uninstalling the add-on, revoking access or deleting inserted cells does not automatically delete saved definitions. There is no automatic expiry or deletion period. This version does not read, migrate or delete properties left by older installations, including per-user properties from an earlier unpublished paid build. Forget does not remove those older properties.</p>
+
+<h2>Google exception logs</h2>
+<p>The manifest retains <code>exceptionLogging: STACKDRIVER</code>. Google Apps Script may record server exceptions in Google Cloud logging for the add-on's Cloud project. Errors such as invalid ranges, lock failures or platform failures can include contextual data: sheet names, cell or range addresses entered or saved, and potentially account identifiers such as email addresses, depending on Google's platform behavior.</p>
+<p>The exact logged fields, actual log access (including publisher access), and retention settings depend on Google and the Cloud project configuration and have not been verified. The add-on does not deliberately call <code>console</code> or <code>Logger</code>; this does not disable platform exception logging. No log deletion schedule is promised.</p>
+
+<h2>Permissions</h2>
+<p>The manifest requests exactly two OAuth scopes:</p>
+<ul>
+<li><code>https://www.googleapis.com/auth/spreadsheets.currentonly</code>: read and write the spreadsheet in which you use the add-on.</li>
+<li><code>https://www.googleapis.com/auth/script.container.ui</code>: display the add-on menu and sidebar in the Google editor.</li>
+</ul>
+
+<h2>Your choices and contact</h2>
+<p>You can use Forget, delete output cells in Sheets, stop using the add-on, uninstall it or revoke its authorization through Google. These actions have the deletion limits described above. For privacy questions or requests concerning personal data, contact <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a>. Depending on applicable law and the circumstances, you may have rights to access, correct or erase personal data, restrict or object to processing, receive a portable copy, or complain to a data protection authority. You can send questions or requests to the contact above. Please avoid including unnecessary spreadsheet contents or sensitive information.</p>
+<p>See the <a href="terms.html">terms of use</a> for write risks and feature limits.</p>
+
+<footer>Matheus Mello, individual developer, Portugal · Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a></footer>
+</main>
+</body>
+</html>
