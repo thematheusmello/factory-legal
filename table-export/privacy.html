@@ -11,62 +11,31 @@
 <header class="site"><div><a href="../index.html">Matheus Mello · Software</a><nav><a href="../table-export/">GridGrab</a><a href="../contact-extractor/">ContactSift</a><a href="../crate-cram/">Crate Cram</a></nav></div></header>
 <main>
 <h1>GridGrab privacy policy</h1>
-<p class="muted">Effective date: 7 November 2026</p>
+<p class="muted">Effective date: 8 November 2026</p>
 <p>This policy explains how the GridGrab – Table &amp; List to CSV/Excel browser extension (“GridGrab”) handles information. GridGrab is published by
 Matheus Mello, an individual developer based in Portugal (“I”, “me”). Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a>.</p>
 
-<h2>Summary</h2>
+<h2>Scope and free use</h2>
+<p>This policy covers the packaged GridGrab 0.1.0 editions for Chrome and Firefox. Both are free, work locally and require no account. Neither edition uploads extracted data or makes extension-initiated network requests. There is no analytics, advertising, telemetry or remotely loaded executable code. Normal website activity and browser-managed services remain subject to their own policies.</p>
+<h2>Page access and processing</h2>
+<p>Opening GridGrab lets its bundled code detect tables and repeated lists in the selected tab. It reads page text and, for lists, link and image URL values; it does not fetch those URLs. Detection uses visibility checks, but text inside a selected cell can include descendant text. Preview and selected rows are held in popup memory, rather than saved as page content in extension storage.</p>
+<p>Both editions request only <code>activeTab</code>, <code>scripting</code> and <code>storage</code>, with no standing website host permissions. These allow temporary access to the selected tab, execution of the bundled reader and local preferences and usage storage. Regular HTTP/HTTPS pages are supported; local file access depends on browser permission. Browser and store pages may block access.</p>
+<h2>Chrome and Firefox differences</h2>
+<p>Both editions can outline and scroll to a candidate on the page. These inline style changes can be observed by the page’s own scripts; extracted rows are not inserted into the page.</p>
 <ul>
-<li>GridGrab works locally in your browser. I do not receive the tables and lists you extract, your clipboard, your exported files or your browsing history.</li>
-<li>No analytics, advertising, trackers or remotely loaded code.</li>
-<li>No account is needed for free use.</li>
-<li>Optional Pro purchases are handled by ExtensionPay and its payment processor Stripe.</li>
+<li><strong>Firefox:</strong> when the popup connection closes, the content script removes the highlight, restores the previous outline styles and drops its candidate references. Private browsing is disabled by the manifest. Persistent extension storage contains only the CSV delimiter, UTF-8 BOM preference and UTC daily export date/count.</li>
+<li><strong>Chrome:</strong> the content script has no corresponding popup-close cleanup. Its candidate references and last outline can remain until the document is unloaded, such as on navigation or reload. The manifest does not disable private browsing; access there depends on browser settings. Its local usage counter is not isolated by session type, so do not assume a separate private-session counter. Normal use stores the delimiter, BOM preference and UTC daily export date/count. Chrome also contains local storage handling for site-origin/selector settings; these are not extracted rows, and any existing entries can be removed in settings.</li>
 </ul>
-
-<h2>What the extension reads</h2>
-<p>When you click GridGrab, it reads the visible tables and repeated lists in the tab you selected. Previewed and captured rows stay in the extension’s memory until you close its window or choose another source. Copying and downloading happen only when you ask. Pro multi-page capture clicks the “Next” control you taught it, with at least 1.5 seconds between pages and at most 50 pages; the website itself makes its normal page requests.</p>
-
-<h2>What is stored on your device</h2>
-<p>The extension stores CSV preferences, “Next” button selectors saved per website origin (CSS selectors, not page contents), the daily export counter and your licence status in <code>chrome.storage.local</code> on your device. This data is not synced by the
-extension and is not sent to me. You can delete it in the extension’s settings (or by clearing the extension’s data), and it is
-removed when you uninstall the extension. Files you export and text you copy stay wherever you put them and are under your control.</p>
-
-<h2>Optional Pro purchases</h2>
-<p>Pro features (unlimited exports and multi-page capture) are sold through <a href="https://extensionpay.com">ExtensionPay</a>, which uses
-<a href="https://stripe.com">Stripe</a> to process payments. When you choose to upgrade, or when the extension checks whether
-your Pro licence is active, it communicates with ExtensionPay. ExtensionPay and Stripe process the information needed for the
-purchase and licence — such as your email address, licence status, transaction details and billing information — under their own
-privacy policies (<a href="https://extensionpay.com/privacy">ExtensionPay</a>, <a href="https://stripe.com/privacy">Stripe</a>).
-Card details are entered on the provider’s checkout page; the extension never sees them. No extracted page data is sent to them.</p>
-<p>If you buy Pro, I receive from ExtensionPay/Stripe your email address, what you bought, the amount, your country and the payment
-status. I use this only to provide and support your licence, handle refunds and complaints, and meet accounting and tax
-obligations (legal bases: performance of a contract and legal obligation, GDPR Art. 6(1)(b) and (c)). I keep purchase records for
-as long as Portuguese tax and accounting law requires (currently up to 10 years) and other support emails for as long as needed to
-handle your request.</p>
-
-<h2>Sharing</h2>
-<p>I do not sell or rent personal data and do not share it for advertising. Purchase data is processed by ExtensionPay and Stripe as
-described above, and may be disclosed to authorities where the law requires it. Some providers may process data outside the EEA;
-they rely on safeguards recognised by EU law, such as Standard Contractual Clauses.</p>
-
-<h2>Permissions</h2>
-<p>GridGrab requests activeTab, scripting and storage only. <em>activeTab</em> gives temporary access to the tab you click the extension on;
-<em>scripting</em> runs the bundled code that reads that page; <em>storage</em> keeps the local data described above. It has no
-standing access to all websites. When Pro payments are enabled, the extension also includes ExtensionPay’s small script that runs
-only on extensionpay.com pages to confirm a purchase.</p>
-
-<h2>Your rights</h2>
-<p>You can ask me for access to, correction or deletion of personal data I hold about you, restrict or object to processing, or
-ask for data portability, by writing to <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a>. For data held by ExtensionPay or Stripe you can also contact them directly. You may
-complain to the Portuguese data protection authority, the Comissão Nacional de Proteção de Dados (<a href="https://www.cnpd.pt">cnpd.pt</a>),
-or the authority in your country.</p>
-
-<h2>Children</h2>
-<p>GridGrab is a productivity tool and is not directed at children under 16.</p>
-
-<h2>Changes</h2>
-<p>If this policy changes, the new version will be published on this page with a new effective date. Material changes will also be
-noted in the extension’s store listing.</p>
+<h2>Limits, clipboard and downloads</h2>
+<p>Both editions allow unlimited TSV copying for Excel or Sheets and a combined five CSV, XLSX, Markdown or JSON exports per UTC day, resetting at 00:00 UTC. CSV and XLSX are generated locally as downloads; TSV, Markdown and JSON are written to the clipboard only when you select the corresponding action. Neither edition reads your clipboard. Chrome consumes the export count before output and does not restore it on failure; Firefox attempts to restore the count if output throws an error.</p>
+<p>Download filenames include the source host name (or “page” when absent) and date. The browser may retain download history. Files and clipboard copies can contain sensitive source data and remain wherever you save or paste them; uninstalling GridGrab does not remove those copies.</p>
+<h2>Retention and control</h2>
+<p>Extension storage uses <code>chrome.storage.local</code> in the browser profile, with no extension-managed sync. Local preferences and counters remain until replaced, the extension’s local data is cleared or the extension is uninstalled. Chrome’s selector-removal controls do not clear all extension data. Firefox settings change CSV preferences; they do not provide a general data-clear button. Popup memory ends when the popup closes; Chrome’s page-side references have the longer lifetime described above.</p>
+<h2>Developer contact and your rights</h2>
+<p>I do not receive the data processed locally by the extension. If you email me, I receive the information you choose to send and use it to answer and handle your request, retaining it only as needed for that purpose or applicable legal obligations. Do not send extracted data unless it is needed for your request and you are entitled to share it. I do not sell personal data or share it for advertising.</p>
+<p>For personal data I hold, you may request access, correction, deletion, restriction, objection or portability where applicable by contacting <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a>. You may complain to the Portuguese data protection authority, the Comissão Nacional de Proteção de Dados (<a href="https://www.cnpd.pt">cnpd.pt</a>), or your local authority.</p>
+<h2>Children and changes</h2>
+<p>This is a productivity tool and is not directed at children under 16. Changes to this policy will be published at this URL with an updated effective date.</p>
 <footer>Published by Matheus Mello, individual developer, Portugal · Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a></footer>
 </main>
 </body>

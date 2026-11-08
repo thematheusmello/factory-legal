@@ -11,62 +11,28 @@
 <header class="site"><div><a href="../index.html">Matheus Mello · Software</a><nav><a href="../table-export/">GridGrab</a><a href="../contact-extractor/">ContactSift</a><a href="../crate-cram/">Crate Cram</a></nav></div></header>
 <main>
 <h1>ContactSift privacy policy</h1>
-<p class="muted">Effective date: 7 November 2026</p>
+<p class="muted">Effective date: 8 November 2026</p>
 <p>This policy explains how the ContactSift – Email &amp; Phone Extractor browser extension (“ContactSift”) handles information. ContactSift is published by
 Matheus Mello, an individual developer based in Portugal (“I”, “me”). Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a>.</p>
 
-<h2>Summary</h2>
-<ul>
-<li>ContactSift works locally in your browser. I do not receive the contacts you extract, page contents, URLs or your browsing history.</li>
-<li>No analytics, advertising, trackers or remotely loaded code.</li>
-<li>No account is needed for free use.</li>
-<li>Optional Pro purchases are handled by ExtensionPay and its payment processor Stripe.</li>
-</ul>
-
+<h2>Scope and free use</h2>
+<p>This policy covers ContactSift 0.1.0 for Chrome. It is free, works locally and requires no account or server. It does not upload contacts, page contents, source URLs or browsing history, and makes no extension-initiated network requests. There is no analytics, advertising, tracking or remotely loaded executable code. Normal website activity and browser-managed services remain subject to their own policies.</p>
 <h2>What the extension reads</h2>
-<p>When you click “Scan this page”, ContactSift reads the visible text, email and phone links and Cloudflare-encoded email attributes of the tab you selected, to find publicly listed contacts. It does not crawl websites, read other tabs or send messages. Scan results stay in the popup’s memory until it closes.</p>
-
-<h2>What is stored on your device</h2>
-<p>The extension stores the contacts you choose to save (email address or phone number, source page URL, page title, a short context snippet and the time found), your named collections, default phone country, filter preferences, the daily scan counter and your licence status in <code>chrome.storage.local</code> on your device. This data is not synced by the
-extension and is not sent to me. You can delete it in the extension’s settings (or by clearing the extension’s data), and it is
-removed when you uninstall the extension. Files you export and text you copy stay wherever you put them and are under your control.</p>
-
-<h2>Optional Pro purchases</h2>
-<p>Pro features (unlimited scans and contacts, named collections, domain filter and exclude lists) are sold through <a href="https://extensionpay.com">ExtensionPay</a>, which uses
-<a href="https://stripe.com">Stripe</a> to process payments. When you choose to upgrade, or when the extension checks whether
-your Pro licence is active, it communicates with ExtensionPay. ExtensionPay and Stripe process the information needed for the
-purchase and licence — such as your email address, licence status, transaction details and billing information — under their own
-privacy policies (<a href="https://extensionpay.com/privacy">ExtensionPay</a>, <a href="https://stripe.com/privacy">Stripe</a>).
-Card details are entered on the provider’s checkout page; the extension never sees them. No extracted page data is sent to them.</p>
-<p>If you buy Pro, I receive from ExtensionPay/Stripe your email address, what you bought, the amount, your country and the payment
-status. I use this only to provide and support your licence, handle refunds and complaints, and meet accounting and tax
-obligations (legal bases: performance of a contract and legal obligation, GDPR Art. 6(1)(b) and (c)). I keep purchase records for
-as long as Portuguese tax and accounting law requires (currently up to 10 years) and other support emails for as long as needed to
-handle your request.</p>
-
-<h2>Sharing</h2>
-<p>I do not sell or rent personal data and do not share it for advertising. Purchase data is processed by ExtensionPay and Stripe as
-described above, and may be disclosed to authorities where the law requires it. Some providers may process data outside the EEA;
-they rely on safeguards recognised by EU law, such as Standard Contractual Clauses.</p>
-
+<p>When you click “Scan this page”, the bundled scanner reads the selected HTTP/HTTPS tab’s rendered body text, mailto/tel link values and Cloudflare-encoded email attributes. Link and encoded-attribute searches are not restricted to visible elements. It also reads the page title and full URL for source attribution. It recognises common email obfuscations, normalises and deduplicates email addresses, and checks and formats phone numbers locally using bundled numbering metadata and your selected default country. It does not verify that an address is deliverable or a number belongs to a particular person.</p>
+<p>ContactSift does not crawl linked pages, automatically scan other tabs or send messages. Browser and store pages can block scanning. Scan results stay in popup memory until replaced by another scan or the popup closes; they are saved persistently only when you choose to add selected contacts.</p>
+<h2>Local storage and limits</h2>
+<p>Up to 100 unique contacts can be saved in the default “My collection”. Saved records include contact type, email address or international phone number, national phone formatting, source page title and full URL, context snippet and discovery timestamp. Treat these records as potentially personal or sensitive information.</p>
+<p><code>chrome.storage.local</code> stores this collection, the default phone country, settings fields for filtering and collection selection, and the UTC daily scan date/count. No extension-managed sync is used. The current free interface uses the default collection. Five scan attempts are allowed per UTC day, resetting at 00:00 UTC; an attempt is counted before page access, so a failed scan can still count. Copying, CSV export and saving existing scan results do not consume additional scans.</p>
+<h2>Clipboard, downloads and deletion</h2>
+<p>You can copy selected contact values as newline-separated text or download selected results as <code>contactsift.csv</code>. Settings also allow copying or exporting the saved collection and clearing its contacts. CSV contains type, value, national phone formatting, page title, full source URL and discovery time; context snippets remain in saved records but are not included in CSV. Clipboard actions write values only and do not read your clipboard. Files are generated locally, and the browser may keep download history.</p>
+<p>Saved records remain until you clear the collection, clear the extension’s local data or uninstall. Clearing the collection does not reset all preferences or the scan counter. Exported files and pasted or clipboard copies remain under your control and are not removed by clearing the extension or uninstalling it.</p>
 <h2>Permissions</h2>
-<p>ContactSift requests activeTab, scripting and storage only. <em>activeTab</em> gives temporary access to the tab you click the extension on;
-<em>scripting</em> runs the bundled code that reads that page; <em>storage</em> keeps the local data described above. It has no
-standing access to all websites. When Pro payments are enabled, the extension also includes ExtensionPay’s small script that runs
-only on extensionpay.com pages to confirm a purchase.</p>
-
-<h2>Your rights</h2>
-<p>You can ask me for access to, correction or deletion of personal data I hold about you, restrict or object to processing, or
-ask for data portability, by writing to <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a>. For data held by ExtensionPay or Stripe you can also contact them directly. You may
-complain to the Portuguese data protection authority, the Comissão Nacional de Proteção de Dados (<a href="https://www.cnpd.pt">cnpd.pt</a>),
-or the authority in your country.</p>
-
-<h2>Children</h2>
-<p>ContactSift is a productivity tool and is not directed at children under 16.</p>
-
-<h2>Changes</h2>
-<p>If this policy changes, the new version will be published on this page with a new effective date. Material changes will also be
-noted in the extension’s store listing.</p>
+<p>ContactSift requests only <code>activeTab</code>, <code>scripting</code> and <code>storage</code>, with no website host permissions. These provide temporary access to the selected tab, run the bundled scanner and save the local records and preferences described above.</p>
+<h2>Developer contact and your rights</h2>
+<p>I do not receive the data processed locally by the extension. If you email me, I receive the information you choose to send and use it to answer and handle your request, retaining it only as needed for that purpose or applicable legal obligations. Do not send extracted data unless it is needed for your request and you are entitled to share it. I do not sell personal data or share it for advertising.</p>
+<p>For personal data I hold, you may request access, correction, deletion, restriction, objection or portability where applicable by contacting <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a>. You may complain to the Portuguese data protection authority, the Comissão Nacional de Proteção de Dados (<a href="https://www.cnpd.pt">cnpd.pt</a>), or your local authority.</p>
+<h2>Children and changes</h2>
+<p>This is a productivity tool and is not directed at children under 16. Changes to this policy will be published at this URL with an updated effective date.</p>
 <footer>Published by Matheus Mello, individual developer, Portugal · Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a></footer>
 </main>
 </body>
