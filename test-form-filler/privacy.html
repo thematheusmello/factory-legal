@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>FillPilot privacy policy</title>
+<meta name="description" content="FillPilot privacy policy">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Matheus Mello · Software</a><nav><a href="../table-export/">GridGrab</a><a href="../contact-extractor/">ContactSift</a><a href="../crate-cram/">Crate Cram</a></nav></div></header>
+<main>
+<h1>FillPilot privacy policy</h1>
+<p>Publisher: Matheus da Silveira Mello<br />
+Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a><br />
+Effective date: 8 November 2026<br />
+Applies to: FillPilot – Test Data Form Filler 0.2.0 for Firefox desktop (Firefox 142 or later).</p>
+<p>FillPilot 0.2.0 is a free tool that fills web forms with synthetic test data for QA and development. It has no account, no analytics, no advertising and no server. The publisher receives no data from it.</p>
+<p><strong>What it reads, and when.</strong> FillPilot reads only when you use it: the popup's "Fill empty fields" button, its keyboard shortcut, or "Fill this form" in the right-click menu. It reads form-field metadata (types, names, ids, labels, placeholders, autocomplete hints) in the top frame of that tab. FillPilot never reads, fills or saves:
+- password fields, including passwords a page has revealed as plain text when the field is labelled or hinted as a password;
+- one-time codes;
+- payment fields such as card number, CVV/CVC, expiry and IBAN;
+- hidden and file fields;
+- consent, terms, purchase or subscription checkboxes.</p>
+<p>This exclusion is decided from metadata before any value is read. A secret in a field with no recognizable wording or hints, such as an unlabelled password field already revealed as text, cannot be identified. Existing values are never changed.</p>
+<p><strong>What it stores, where, and for how long.</strong> Everything is kept in the browser's extension storage (storage.local) on this device, not synced and not encrypted:
+- settings: locale and edge-case mode;
+- custom rules, exactly as typed;
+- site profiles, saved only after you read the popup's notice, tick "I understand" and click "Save site profile". A profile holds up to 200 values of the page's visible, eligible text fields and selects plus its checkbox/radio states, keyed by CSS selector under the site's origin. Typed names and e-mail addresses are saved as they are, so capture synthetic data only.</p>
+<p>All of it remains until you delete it or remove FillPilot.</p>
+<p><strong>Deletion.</strong> In Profiles &amp; custom rules:
+- one site: Delete next to it;
+- all profiles: Delete all profiles, then click again to confirm;
+- rules: clear the box and save;
+- everything: remove FillPilot from the browser.</p>
+<p>Profiles saved by FillPilot 0.1.x, which did not skip passwords or payment fields, are marked with a warning. Delete them.</p>
+<p><strong>Transmission.</strong> None. FillPilot has no network code, and its pages block all connections (<code>connect-src 'none'</code>). Mozilla <code>data_collection_permissions</code>: <code>none</code>.</p>
+<p><strong>Websites.</strong> FillPilot writes values into the page. The website's own scripts can read them and send them elsewhere, and FillPilot cannot prevent that. FillPilot never submits forms or clicks buttons or links. Use it only on pages you are authorized to test.</p>
+<p><strong>Permissions.</strong>
+- activeTab: the tab you act on;
+- scripting: inject FillPilot's bundled code into that tab;
+- contextMenus: the menu item;
+- storage: local data.</p>
+<p>There is no host, history, downloads or clipboard access.</p>
+<p><strong>Support emails.</strong> If you email us, we use your message only to answer you, keep it only as long as needed to handle your request, and delete it within 12 months.</p>
+<p><strong>Changes.</strong> Changes are published on this page with a new effective date.</p>
+<p><strong>Contact.</strong> <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a></p><p><a href="index.html">FillPilot</a> · <a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a></p>
+<footer>Published by Matheus da Silveira Mello, individual developer, Portugal · Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a></footer>
+</main>
+</body>
+</html>
