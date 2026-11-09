@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PicHarvest privacy policy</title>
+<meta name="description" content="PicHarvest privacy policy">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Matheus Mello · Software</a><nav><a href="../table-export/">GridGrab</a><a href="../contact-extractor/">ContactSift</a><a href="../crate-cram/">Crate Cram</a></nav></div></header>
+<main>
+<h1>PicHarvest privacy policy</h1>
+<p>Publisher: Matheus da Silveira Mello<br />
+Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a><br />
+Effective date: 9 November 2026<br />
+Applies to: PicHarvest – Bulk Image Downloader 0.2.0 for Firefox desktop (Firefox 142 or later).</p>
+<p><strong>Summary.</strong> PicHarvest has no telemetry, analytics, advertising, accounts or publisher servers. It doesn’t send your pages, images, settings or browsing activity to the publisher or anyone else. It does use the network for you: after you act, it requests images from the websites that host them.</p>
+<p><strong>What is read.</strong> After you click the PicHarvest button and choose Scan page, Load lazy images or Open in tab, a script runs in that tab and its accessible frames. It reads image addresses (img, srcset, picture, CSS backgrounds, common lazy-load attributes, links to image files) and copies inline SVG. Results stay in PicHarvest’s open window or tab and are discarded when you close it. The current tab’s address is used to name the site folder and for the Same domain only filter. PicHarvest does not collect form contents, cookies, passwords or browsing history, and it does not run on any page until you click it.</p>
+<p><strong>Network.</strong> When you download, make a ZIP or convert, the extension requests the image files directly from the websites hosting them — never from the publisher:
+- Scan / expanded view: each found image may be loaded to show a thumbnail and measure size (no referrer).
+- Load lazy images: scrolling can make the page fetch more of its own content.
+- Download selected: selected images go through Firefox’s download manager (usual cookie rules). Inline images are saved from memory without a request.
+- Download ZIP or PNG/JPG conversion: PicHarvest fetches the selected images without cookies or referrer, after optional per-site host permission is granted for those image hosts. If you decline, nothing is fetched or saved.
+Those sites see a normal request (IP address, user agent, and cookies per browser rules for Download selected). They may redirect to a CDN. PicHarvest cannot control what they record. There is no telemetry and nothing is sent to us.</p>
+<p><strong>What is stored.</strong> Only your settings in the browser’s local extension storage on this device: download folder, filename template, and default minimum width and height. They are not synced. There is no scan history, usage counter or identifier. Updating from the 0.1.0 Chrome version deletes the daily usage counter that version kept. Downloaded files and the browser’s download history are yours.</p>
+<p><strong>Permissions.</strong>
+- storage: remember folder, template and default size filters locally;
+- activeTab and scripting: read image addresses from the current tab only after you click PicHarvest;
+- downloads: save files to your Downloads folder;
+- optional_host_permissions http://*/* and https://*/*: never at install; requested only when you use ZIP or conversion, and only for the hosts of the selected images (Firefox host-only patterns such as https://images.example/*). Download selected with Keep original does not need it. You can decline or remove access later in about:addons.
+No commands / keyboard shortcuts. No declared content scripts. Firefox data collection declaration: required ["none"] (image requests to hosting sites are the user-requested feature, not data collection for the developer).</p>
+<p><strong>Deletion.</strong> Restore defaults or change settings on the Settings page. Remove granted site access in Firefox’s add-on settings. Removing PicHarvest deletes its settings; downloaded files stay until you delete them.</p>
+<p><strong>Support emails.</strong> If you email us, we use your message only to answer you, keep it only as long as needed to handle your request, and delete it within 12 months.</p>
+<p><strong>Changes.</strong> If this policy changes, the effective date above will be updated.</p>
+<p><strong>Contact.</strong> <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a></p><p><a href="index.html">PicHarvest</a> · <a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a></p>
+<footer>Published by Matheus da Silveira Mello, individual developer, Portugal · Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a></footer>
+</main>
+</body>
+</html>
