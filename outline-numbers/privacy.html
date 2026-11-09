@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Outline Numbers privacy policy</title>
+<meta name="description" content="Outline Numbers privacy policy">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Matheus Mello · Software</a><nav><a href="../table-export/">GridGrab</a><a href="../contact-extractor/">ContactSift</a><a href="../crate-cram/">Crate Cram</a></nav></div></header>
+<main>
+<h1>Outline Numbers privacy policy</h1>
+<p>Publisher: Matheus da Silveira Mello<br />
+Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a><br />
+Effective date: 9 November 2026<br />
+Applies to: Outline Numbers for Google Docs.</p>
+<p><strong>Summary.</strong> Outline Numbers works locally in the open Google Docs file. It implements no network communication, external server, analytics, advertising or telemetry. Document content stays in the file.</p>
+<p><strong>What is read.</strong> The text and heading level of Heading 1–6 paragraphs in the body of the current Google Docs file, to preview and edit their number prefixes. The add-on does not intentionally log document text.</p>
+<p><strong>What is stored.</strong> Three kinds of document-associated data in that file’s DocumentProperties (not user properties):
+- an undo snapshot: for each heading, in order, its position, level and original text (and, where manual numbers were removed, the expected text without numbers), chunked across several properties;
+- a summary of the last change: whether headings were numbered or numbers removed, how many headings changed, and the time of the change;
+- the numbering options last applied: heading levels, style and separator (the manual-number option is not stored).
+Previews make no document or property writes. A change that edits headings replaces the previous snapshot and summary; a successful undo deletes them. The remembered options remain until the next numbering. Closing the sidebar does not erase this data. Anyone who runs Outline Numbers in the same file can see it. Document copies, retention, sharing and version history are governed by Google Workspace.</p>
+<p><strong>Network.</strong> The add-on makes no network requests of its own and sends nothing to the publisher or third parties. Google provides the editor and the Apps Script runtime and may process operational logs under its own terms.</p>
+<p><strong>Permissions.</strong>
+- <code>https://www.googleapis.com/auth/documents.currentonly</code>: read and edit headings in the document where the add-on is opened;
+- <code>https://www.googleapis.com/auth/script.container.ui</code>: show the sidebar and the Extensions menu entry.
+No other scopes are requested.</p>
+<p><strong>Support emails.</strong> If you email us, we use your message only to answer you, keep it only as long as needed to handle your request, and delete it within 12 months.</p>
+<p><strong>Changes.</strong> If this policy changes, the effective date above will be updated.</p>
+<p><strong>Contact.</strong> <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a></p>
+<p>Google Docs and Google Workspace are trademarks of Google LLC. Outline Numbers is an independent add-on and is not affiliated with, endorsed or sponsored by Google.</p>
+<p><a href="index.html">Outline Numbers</a> · <a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a></p>
+<footer>Published by Matheus da Silveira Mello, individual developer, Portugal · Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a></footer>
+</main>
+</body>
+</html>

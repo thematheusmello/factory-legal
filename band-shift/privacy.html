@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Band Shift privacy policy</title>
+<meta name="description" content="Band Shift privacy policy">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Matheus Mello · Software</a><nav><a href="../table-export/">GridGrab</a><a href="../contact-extractor/">ContactSift</a><a href="../crate-cram/">Crate Cram</a></nav></div></header>
+<main>
+<h1>Band Shift privacy policy</h1>
+<p>Publisher: Matheus da Silveira Mello<br />
+Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a><br />
+Effective date: 9 November 2026<br />
+Applies to: Band Shift for Google Sheets.</p>
+<p><strong>Summary.</strong> Band Shift works only inside the spreadsheet where you open it, and only when you use its sidebar. It has no server of its own, sends nothing to the developer or to third parties, and has no network requests, analytics, advertising or tracking.</p>
+<p><strong>What is read.</strong>
+- The displayed text of the key column you choose, within the range you select (other columns’ contents are not read);
+- The fill colors of the cells a change will write, so they can be restored;
+- The selected range’s sheet ID, sheet name and A1 address, used in messages and to match Undo to the right range.
+The sidebar may show range labels, row and group counts, and up to five group-start keys from your selection (shortened to 40 characters); these are not stored.</p>
+<p><strong>What is written.</strong> Fill (background) colors in the selected range only when you choose Apply banding, Clear fill colors or Undo last change. Values, formulas, borders and number formats are not written. One Undo snapshot is kept in the document properties of the current spreadsheet: sheet ID, A1 range, whether a header row was skipped, whether the last change was Apply or Clear, and the earlier fill colors. It contains no cell values, key text, sheet names, personal names or email addresses.</p>
+<p><strong>Retention and sharing.</strong> The snapshot stays in the file until the next Apply or Clear replaces it or a successful Undo deletes it. Closing the sidebar does not delete it. Everyone who can edit the file and use the add-on shares it. Removing the add-on should not be assumed to delete document properties; running Undo last change before removing it deletes the snapshot (and restores the saved fill colors). Google operates Sheets and Apps Script under its own policies. Band Shift does not use user properties, script properties or triggers, and it does not open other files.</p>
+<p><strong>Network.</strong> No network requests to the publisher or third parties. No telemetry.</p>
+<p><strong>Permissions.</strong>
+- <code>https://www.googleapis.com/auth/spreadsheets.currentonly</code>: the current spreadsheet only;
+- <code>https://www.googleapis.com/auth/script.container.ui</code>: sidebar and menu inside Sheets.
+It does not request access to Drive as a whole, Gmail or other files.</p>
+<p><strong>Support emails.</strong> If you email us, we use your message only to answer you, keep it only as long as needed to handle your request, and delete it within 12 months.</p>
+<p><strong>Changes.</strong> If this policy changes, the effective date above will be updated.</p>
+<p><strong>Contact.</strong> <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a></p>
+<p>Google Sheets and Google Workspace are trademarks of Google LLC. Band Shift is an independent add-on and is not affiliated with, endorsed or sponsored by Google.</p>
+<p><a href="index.html">Band Shift</a> · <a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a></p>
+<footer>Published by Matheus da Silveira Mello, individual developer, Portugal · Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a></footer>
+</main>
+</body>
+</html>
