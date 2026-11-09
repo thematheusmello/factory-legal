@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>OverlayCheck privacy policy</title>
+<meta name="description" content="OverlayCheck privacy policy">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Matheus Mello · Software</a><nav><a href="../table-export/">GridGrab</a><a href="../contact-extractor/">ContactSift</a><a href="../crate-cram/">Crate Cram</a></nav></div></header>
+<main>
+<h1>OverlayCheck privacy policy</h1>
+<p>Publisher: Matheus da Silveira Mello<br />
+Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a><br />
+Effective date: 9 November 2026<br />
+Applies to: OverlayCheck – Pixel-Perfect Overlay 0.2.0 for Firefox desktop (Firefox 142 or later).</p>
+<p><strong>Summary.</strong> OverlayCheck does not collect, sell or transmit any data. Everything it saves stays in your browser profile on your device. It makes no network requests of its own. The websites you open still load their own resources and may collect data under their own policies; OverlayCheck does not change that.</p>
+<p><strong>What is stored.</strong>
+- Mockup images you choose or drop (PNG, JPG or WebP), in the add-on’s own IndexedDB database in your browser profile;
+- Layer details in local extension storage: a random layer ID, the image’s file name, its pixel dimensions, your settings (opacity, position, scale, blend, visibility, lock, invert) and the page the layer belongs to.
+The page is recorded as scheme, host and path only (for example https://example.com/pricing). Query strings and fragments are discarded. For a local HTML file, the page is its file path. OverlayCheck does not read page text, form contents, cookies or browsing history. It reads the current tab’s address only while the overlay is open on it, and only to match layers to that page.</p>
+<p><strong>When OverlayCheck has access.</strong> Only after you click its toolbar button. Firefox then grants temporary access to that one tab (activeTab) and OverlayCheck injects its packaged overlay. It has no permanent host access, no registered content scripts and no registered keyboard commands. Browser pages and sites Firefox protects cannot run the overlay.</p>
+<p><strong>Network.</strong> OverlayCheck makes no network requests of its own and loads no remote code. Extension pages use CSP <code>connect-src 'none'</code>. Images are stored as local data URLs; export uses a local Blob URL. The websites you open still make their own network requests as usual. Firefox data collection declaration: required ["none"].</p>
+<p><strong>Sharing and exports.</strong> Nothing is uploaded. Export, in the Library, saves a JSON file to your device through your browser’s normal download; it contains your mockup images, file names, settings and page addresses. Import reads a JSON file you choose, checks the whole file before saving anything, and adds its layers next to your existing ones without replacing them.</p>
+<p><strong>Permissions.</strong> activeTab (current tab after toolbar click); scripting (inject packaged content.js into that tab); storage (layer settings); unlimitedStorage (large mockup images locally). No host permissions.</p>
+<p><strong>Deletion.</strong> Delete a layer in the overlay panel or in the Library to remove its settings and image. Uninstalling OverlayCheck removes the data Firefox stores for it. Copies you exported, and backups of your browser profile, are outside OverlayCheck’s control.</p>
+<p><strong>Support emails.</strong> If you email us, we use your message only to answer you, keep it only as long as needed to handle your request, and delete it within 12 months.</p>
+<p><strong>Changes.</strong> If this policy changes, the effective date above will be updated.</p>
+<p><strong>Contact.</strong> <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a></p><p><a href="index.html">OverlayCheck</a> · <a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a></p>
+<footer>Published by Matheus da Silveira Mello, individual developer, Portugal · Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a></footer>
+</main>
+</body>
+</html>
