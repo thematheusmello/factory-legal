@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>LoopDeck privacy policy</title>
+<meta name="description" content="LoopDeck privacy policy">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Matheus Mello · Software</a><nav><a href="../table-export/">GridGrab</a><a href="../contact-extractor/">ContactSift</a><a href="../crate-cram/">Crate Cram</a></nav></div></header>
+<main>
+<h1>LoopDeck privacy policy</h1>
+<p>Publisher: Matheus da Silveira Mello<br />
+Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a><br />
+Effective date: 9 November 2026<br />
+Applies to: LoopDeck – A-B Loop &amp; Speed for Video 0.2.0 for Firefox desktop (Firefox 142 or later).</p>
+<p><strong>Summary.</strong> LoopDeck does not collect, sell or share personal data. It has no account, analytics, advertising, telemetry or payments, and it makes no network requests of its own. Everything it stores stays in your browser.</p>
+<p><strong>What is accessed.</strong> Only after you click the LoopDeck toolbar button or press its shortcut, the browser gives temporary access to the current tab. LoopDeck injects its control bar into frames it can reach, finds HTML5 video and audio, and reads or changes playback position and speed for repeats. It does not read page text, forms or passwords, and it does not record or download media. Closing the control bar stops this on that tab. Some pages cannot be accessed (built-in browser pages, add-on store pages, cross-origin embedded players).</p>
+<p><strong>What is stored.</strong>
+- Saved loops in browser local extension storage on this device: a normalized page address (fragment removed; query parameters other than v, id, video and episode stripped), the loop name you choose, A and B times, and playback speed. The remaining address can still identify which video or lesson you were practising.
+- Defaults (playback speed, breathing gap, count-in) in the same local storage.
+- Which frame of a tab holds the control bar, in session storage until the browser closes.
+LoopDeck does not use browser sync, so this data is not copied to other devices.</p>
+<p><strong>Network.</strong> LoopDeck itself sends no network requests to the publisher or any third party (extension pages use CSP <code>connect-src 'none'</code>). Video and audio continue to stream from the website you are watching; seeking or repeating a section can make that site’s player request media again — that traffic is between your browser and the website under the website’s own privacy policy.</p>
+<p><strong>Import and export.</strong> Export saves your loops as a JSON file wherever you choose; LoopDeck does not send that file anywhere. Import reads only the file you pick, checks it, and merges valid loops into local storage.</p>
+<p><strong>Permissions.</strong>
+- activeTab: temporary access to the current tab after the toolbar button or shortcut;
+- scripting: injects the bundled content.js (control bar) into that tab after that action;
+- storage: local storage for loops and defaults; session storage for the active frame.
+No host permissions. No declared content scripts (content.js is injected only after activation). Default attach shortcut: Ctrl+Shift+7 (changeable in Firefox’s Manage Extension Shortcuts). Firefox data collection declaration: required ["none"].</p>
+<p><strong>Deletion.</strong> Delete a saved loop with its × button in the LoopDeck popup. Removing LoopDeck deletes its stored loops and settings. Exported JSON files are yours to delete.</p>
+<p><strong>Support emails.</strong> If you email us, we use your message only to answer you, keep it only as long as needed to handle your request, and delete it within 12 months.</p>
+<p><strong>Changes.</strong> If this policy changes, the effective date above will be updated.</p>
+<p><strong>Contact.</strong> <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a></p><p><a href="index.html">LoopDeck</a> · <a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a></p>
+<footer>Published by Matheus da Silveira Mello, individual developer, Portugal · Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a></footer>
+</main>
+</body>
+</html>
