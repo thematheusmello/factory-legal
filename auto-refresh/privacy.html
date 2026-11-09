@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>ReloadWatch privacy policy</title>
+<meta name="description" content="ReloadWatch privacy policy">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Matheus Mello · Software</a><nav><a href="../table-export/">GridGrab</a><a href="../contact-extractor/">ContactSift</a><a href="../crate-cram/">Crate Cram</a></nav></div></header>
+<main>
+<h1>ReloadWatch privacy policy</h1>
+<p>Publisher: Matheus da Silveira Mello<br />
+Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a><br />
+Effective date: 8 November 2026<br />
+Applies to: ReloadWatch – Auto Refresh &amp; Change Alert 0.2.0 for Firefox desktop (Firefox 142 or later).</p>
+<p><strong>Summary.</strong> ReloadWatch reloads pages you choose and checks them for text or element changes inside your browser. It has no account, analytics, ads or remote code, and it sends nothing to the publisher or any third party. Reloads are ordinary visits to the watched website and use your browser's normal cookies for that site.</p>
+<p><strong>What is read.</strong> On a page you choose to watch, ReloadWatch reads the visible page text and, if you picked an element, that element's text. Matching happens locally in a content script after each load and when the page changes. Only a yes/no result (is your phrase present) and a short fingerprint of the picked element's text are passed to the add-on's background. Page text and cookies are not stored and are not sent anywhere.</p>
+<p><strong>What is stored.</strong>
+- Saved rules (page address, match mode, interval, jitter, alert type, watched phrase, element selector, sound, reload limit, active hours) stay in local extension storage until you delete them. There is no automatic expiry.
+- Live watches (a settings copy, counter, next reload time, element fingerprint) and a picked element (selector and page address) stay in session storage and end with the watch, the browser session or an add-on restart.
+- Site access you grant is kept by the browser until you remove it.
+- Storage does not hold page text or cookies.</p>
+<p><strong>Deletion.</strong> Stop ends a watch but keeps its saved rule, which starts again when its page next loads. Delete rule removes one saved rule and stops watches it started. Delete all ReloadWatch data removes all saved rules, live watches and the picked element and releases site access. Uninstalling removes the add-on's storage.</p>
+<p><strong>Notifications.</strong> A match shows "ReloadWatch · Match found" with a generic line naming only the site's host (for example "Watched text appeared on example.com"). It never includes the phrase, page text, full address, query string, cookies or credentials. The operating system may keep notification history.</p>
+<p><strong>Network.</strong> The add-on itself makes no requests to the publisher or any third party (CSP <code>connect-src 'none'</code>). Reloads do request the watched website with your normal cookies, IP address and browser details, governed by that site's own policy. Visiting this policy page or emailing support is separate from using the add-on.</p>
+<p><strong>Permissions.</strong>
+- activeTab: act on the tab you clicked from;
+- scripting: run the page controller and element picker;
+- alarms: schedule reloads;
+- notifications: show a match alert;
+- storage: keep rules and live state locally;
+- optional site access (<code>http://*/*</code> / <code>https://*/*</code>): requested one site at a time as <code>&lt;scheme&gt;://&lt;host&gt;/*</code> when you start a watch. Denying it starts nothing. In Firefox every watch asks, because Firefox ends temporary access when a page reloads. Nothing is requested at install. No keyboard shortcuts.</p>
+<p><strong>Support emails.</strong> If you email us, we use your message only to answer you, keep it only as long as needed to handle your request, and delete it within 12 months.</p>
+<p><strong>Changes.</strong> If this policy changes, the effective date above will be updated.</p>
+<p><strong>Contact.</strong> <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a></p><p><a href="index.html">ReloadWatch</a> · <a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a></p>
+<footer>Published by Matheus da Silveira Mello, individual developer, Portugal · Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a></footer>
+</main>
+</body>
+</html>
