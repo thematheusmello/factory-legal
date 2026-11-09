@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>RecLocal privacy policy</title>
+<meta name="description" content="RecLocal privacy policy">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Matheus Mello · Software</a><nav><a href="../table-export/">GridGrab</a><a href="../contact-extractor/">ContactSift</a><a href="../crate-cram/">Crate Cram</a></nav></div></header>
+<main>
+<h1>RecLocal privacy policy</h1>
+<p>Publisher: Matheus da Silveira Mello<br />
+Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a><br />
+Effective date: 8 November 2026<br />
+Applies to: RecLocal – Screen Recorder, No Watermark 0.2.0 for Firefox desktop (Firefox 142 or later).</p>
+<p><strong>Summary.</strong> RecLocal records only what you choose in Firefox's sharing prompt — a screen or window — and keeps the recording on your device. It has no account, analytics, ads, remote code or upload. The publisher never receives your recordings.</p>
+<p><strong>What is captured.</strong> RecLocal uses your browser's media APIs on your device. In Firefox it cannot record tab or system sound. It records your microphone only if you turn Microphone on, and your camera only if you turn Webcam bubble on. Both are off by default, and Firefox asks for permission first. With the microphone off, the file still contains a silent audio track that RecLocal generates locally (no microphone is opened), so Firefox can save and seek the recording. Recordings can contain anything visible or audible in what you share, including personal or confidential information.</p>
+<p><strong>Where it goes.</strong> Everything stays on this device. RecLocal's pages use a content security policy that blocks network connections (<code>connect-src 'none'</code>). Your browser and the sites you capture may make their own network requests; those are outside RecLocal.</p>
+<p><strong>What is stored, and for how long.</strong>
+- Your latest recording is kept as chunks in your browser's IndexedDB, saved about once a second while you record. Only one recording is kept. It stays until you click Delete local recording, start a new recording (which replaces it), clear extension data, or uninstall RecLocal. There is no automatic expiry. RecLocal asks the browser to keep this storage persistent so it is not cleared automatically when disk space runs low.
+- Downloaded WebM files are ordinary files wherever you save them. Deleting the local recording does not delete downloads.
+- Settings (microphone, webcam, overlay preferences, bubble corner) and recording status stay in the extension's local storage until you clear extension data or uninstall.
+- RecLocal does not store browsing history, page text or website addresses.</p>
+<p><strong>Recovery.</strong> If the browser or the recorder tab closes unexpectedly, you can open what was already saved. Up to about the last second can be missing, and very short or damaged recordings may not play. If the disk fills up, recording stops and the part saved before remains. Recovery is not guaranteed; download important recordings.</p>
+<p><strong>Permissions.</strong>
+- storage: settings and recording status;
+- unlimitedStorage: large local recordings and persistent storage without an extra prompt;
+- activeTab and scripting: after you click the toolbar button, RecLocal may inject a small local overlay into the active ordinary web page. No host permissions. No network access.</p>
+<p><strong>Support emails.</strong> If you email us, we use your message only to answer you, keep it only as long as needed to handle your request, and delete it within 12 months.</p>
+<p><strong>Changes.</strong> If this policy changes, the effective date above will be updated.</p>
+<p><strong>Contact.</strong> <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a></p><p><a href="index.html">RecLocal</a> · <a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a></p>
+<footer>Published by Matheus da Silveira Mello, individual developer, Portugal · Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a></footer>
+</main>
+</body>
+</html>
