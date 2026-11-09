@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Stillpoint privacy policy</title>
+<meta name="description" content="Stillpoint privacy policy">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Matheus Mello · Software</a><nav><a href="../table-export/">GridGrab</a><a href="../contact-extractor/">ContactSift</a><a href="../crate-cram/">Crate Cram</a></nav></div></header>
+<main>
+<h1>Stillpoint privacy policy</h1>
+<p>Publisher: Matheus da Silveira Mello<br />
+Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a><br />
+Effective date: 9 November 2026<br />
+Applies to: Stillpoint – New Tab Tasks &amp; Focus 0.2.0 for Firefox desktop (Firefox 142 or later).</p>
+<p><strong>Summary.</strong> Stillpoint replaces your desktop browser’s new-tab page with a clock, a main focus, task lists and a focus/break timer. Every feature is free and works without an account. Tasks, lists, timer, sessions, settings, custom backgrounds and snapshots stay in local storage with no upload or account. Stillpoint’s own code makes no remote fetches. The search box uses your browser’s default search engine, so new-tab use can involve browser-mediated network traffic.</p>
+<p><strong>What is stored.</strong> In the extension’s local browser storage (<code>storage.local</code>) on this device: tasks with their dates, completion, order and list; list names; your main focus; timer state; daily counts of completed focus sessions; settings; your optional display name; a custom background image if you choose one (as a data URL); and up to seven daily task snapshots. So that new tabs open in the right colours before that storage answers, Stillpoint also keeps a small appearance note in the extension’s own <code>localStorage</code> (light or dark, background colour or gradient, whether a photo is in use — never the photo itself — and clock format). It contains no tasks, name, image or search text. Stillpoint does not sync this data, send it to the publisher, or share it with anyone.</p>
+<p><strong>Search.</strong> The optional search box hands only the text you submit to your browser’s search API (<code>browser.search.query</code> in Firefox), which runs the search with your browser’s default search engine. Your browser then contacts that engine and loads its results, under the browser’s and the engine’s own privacy practices. Stillpoint does not choose, replace or hardcode a search provider, does not keep your search terms, and adds no affiliate codes and rewrites no links. Using the new tab therefore can involve network traffic: Stillpoint never describes it as having none.</p>
+<p><strong>Network (Stillpoint itself).</strong> The extension’s own code makes no network requests: it fetches no remote resources, uploads nothing, and contains no analytics, telemetry, advertising, affiliate links or remote code. Its content security policy blocks network connections (<code>connect-src 'none'</code>). This statement covers Stillpoint itself; your browser’s own services, its updates, search results and the sites you visit use the network under their own terms. Firefox data collection declaration: required ["none"] (Stillpoint itself transmits nothing; browser-handled searches are disclosed above).</p>
+<p><strong>Permissions.</strong>
+- storage: saves your data locally;
+- unlimitedStorage: lets images, snapshots and large task collections exceed the usual quota, still within your device’s limits;
+- alarms: finishes timers on schedule and checks hourly for a new day, when unfinished tasks carry over;
+- notifications: shows “focus complete” and “break complete” messages;
+- search: sends a search you explicitly submit to your default engine.
+Stillpoint asks for no website access, injects nothing into web pages and cannot read them. It defines no keyboard shortcuts of its own; in-page keys such as Alt + ↑/↓ only act inside Stillpoint’s own page.</p>
+<p><strong>Backups, imports and deletion.</strong> An export is a JSON file downloaded to your device with the data listed above, including any image. An import is checked first, needs your confirmation, replaces your current data and resets the timer; an invalid or cancelled import leaves your data unchanged. Selected images are limited to 10 MB and backup files to 20 MB. Snapshots cover up to seven distinct days on which Stillpoint ran; they are not a cloud backup. To remove a custom image, choose “Remove custom image” in Settings and save. Removing the extension or clearing its data deletes what Stillpoint stored — export first if you want to keep it.</p>
+<p><strong>Support emails.</strong> If you email us, we use your message only to answer you, keep it only as long as needed to handle your request, and delete it within 12 months. What you send is handled separately from the extension, which never transmits your data.</p>
+<p><strong>Changes.</strong> If this policy changes, the effective date above will be updated.</p>
+<p><strong>Contact.</strong> <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a></p><p><a href="index.html">Stillpoint</a> · <a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a></p>
+<footer>Published by Matheus da Silveira Mello, individual developer, Portugal · Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a></footer>
+</main>
+</body>
+</html>
