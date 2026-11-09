@@ -21,13 +21,13 @@ Applies to: RecLocal – Screen Recorder, No Watermark 0.2.0 for Firefox desktop
 <p><strong>What is stored, and for how long.</strong>
 - Your latest recording is kept as chunks in your browser's IndexedDB, saved about once a second while you record. Only one recording is kept. It stays until you click Delete local recording, start a new recording (which replaces it), clear extension data, or uninstall RecLocal. There is no automatic expiry. RecLocal asks the browser to keep this storage persistent so it is not cleared automatically when disk space runs low.
 - Downloaded WebM files are ordinary files wherever you save them. Deleting the local recording does not delete downloads.
-- Settings (microphone, webcam, overlay preferences, bubble corner) and recording status stay in the extension's local storage until you clear extension data or uninstall.
+- Settings (microphone, webcam, bubble corner) and recording status stay in the extension's local storage until you clear extension data or uninstall.
 - RecLocal does not store browsing history, page text or website addresses.</p>
 <p><strong>Recovery.</strong> If the browser or the recorder tab closes unexpectedly, you can open what was already saved. Up to about the last second can be missing, and very short or damaged recordings may not play. If the disk fills up, recording stops and the part saved before remains. Recovery is not guaranteed; download important recordings.</p>
 <p><strong>Permissions.</strong>
 - storage: settings and recording status;
-- unlimitedStorage: large local recordings and persistent storage without an extra prompt;
-- activeTab and scripting: after you click the toolbar button, RecLocal may inject a small local overlay into the active ordinary web page. No host permissions. No network access.</p>
+- unlimitedStorage: large local recordings and persistent storage without an extra prompt.
+No host permissions, no content scripts, and no network access.</p>
 <p><strong>Support emails.</strong> If you email us, we use your message only to answer you, keep it only as long as needed to handle your request, and delete it within 12 months.</p>
 <p><strong>Changes.</strong> If this policy changes, the effective date above will be updated.</p>
 <p><strong>Contact.</strong> <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a></p><p><a href="index.html">RecLocal</a> · <a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a></p>
