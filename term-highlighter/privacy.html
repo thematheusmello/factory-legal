@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TermGlow privacy policy</title>
+<meta name="description" content="TermGlow privacy policy">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Matheus Mello · Software</a><nav><a href="../table-export/">GridGrab</a><a href="../contact-extractor/">ContactSift</a><a href="../crate-cram/">Crate Cram</a></nav></div></header>
+<main>
+<h1>TermGlow privacy policy</h1>
+<p>Publisher: Matheus da Silveira Mello<br />
+Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a><br />
+Effective date: 9 November 2026<br />
+Applies to: TermGlow – Multi-Keyword Highlighter 0.2.0 for Firefox desktop (Firefox 142 or later).</p>
+<p><strong>Summary.</strong> TermGlow does not collect, sell or share personal data. It has no accounts, payments, ads, analytics, telemetry or affiliate links. Your lists stay in your browser, and page text is matched on your device.</p>
+<p><strong>What is stored.</strong> In the browser’s extension storage (<code>storage.local</code>) on your device: your term lists (names, colours, terms, and the whole-word and match-case options); whether automatic highlighting is on; and your list of excluded sites. This data is not sent to the publisher or to anyone else, and TermGlow does not sync it between devices. Updating from 0.1.0 deletes the old <code>dailyUsage</code> key.</p>
+<p><strong>Page content.</strong> To highlight a page, TermGlow reads that page’s text inside your browser and marks the words that match your lists. It does this when you click “Highlight this page” or use the keyboard shortcut. If you turn on automatic highlighting, it also does this on every website you load, except the sites you exclude. Page text, page addresses and match counts are not stored or transmitted. Counts are shown in TermGlow’s popup and on its toolbar button, and they are gone when you leave the page.</p>
+<p><strong>Network.</strong> TermGlow makes no network requests of its own and loads no remote code. Its own pages block network connections through a content security policy (<code>connect-src 'none'</code>). The websites you visit still make their own network requests as usual. TermGlow does not add to, read or change that traffic. Firefox data collection declaration: required ["none"].</p>
+<p><strong>Permissions.</strong>
+- storage: saves your lists and settings on your device;
+- activeTab and scripting: let TermGlow highlight the tab you choose, when you choose (content.js is injected only into that tab);
+- optional access to all websites (<code>https://*/*</code>, <code>http://*/*</code>): requested only if you turn on automatic highlighting. TermGlow then registers content.js for page loads with <code>excludeMatches</code> built from your excluded sites, and removes both the registration and the permission when automatic highlighting is turned off. You can also remove access in Firefox’s add-on settings.
+Default highlight shortcut: Ctrl+Shift+7 (changeable in Firefox). No host permissions at install.</p>
+<p><strong>Import and export.</strong> Exported files are saved where you choose and are not uploaded anywhere. Imported files are read on your device.</p>
+<p><strong>Deletion.</strong> Delete lists in TermGlow at any time. Uninstalling TermGlow deletes everything it stored in the browser. Files you exported stay wherever you saved them.</p>
+<p><strong>Support emails.</strong> If you email us, we use your message only to answer you, keep it only as long as needed to handle your request, and delete it within 12 months.</p>
+<p><strong>Changes.</strong> If this policy changes, the effective date above will be updated.</p>
+<p><strong>Contact.</strong> <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a></p><p><a href="index.html">TermGlow</a> · <a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a></p>
+<footer>Published by Matheus da Silveira Mello, individual developer, Portugal · Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a></footer>
+</main>
+</body>
+</html>
