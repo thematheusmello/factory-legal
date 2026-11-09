@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>DraftPebble privacy policy</title>
+<meta name="description" content="DraftPebble privacy policy">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Matheus Mello · Software</a><nav><a href="../table-export/">GridGrab</a><a href="../contact-extractor/">ContactSift</a><a href="../crate-cram/">Crate Cram</a></nav></div></header>
+<main>
+<h1>DraftPebble privacy policy</h1>
+<p>Publisher: Matheus da Silveira Mello<br />
+Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a><br />
+Effective date: 9 November 2026<br />
+Applies to: DraftPebble 0.2.0 for Firefox desktop (Firefox 142 or later).</p>
+<p><strong>Summary.</strong> DraftPebble is a free form-text recovery add-on. It keeps the text you type on websites you choose inside your own browser so that you can restore it later. It has no accounts, payments, ads, analytics, telemetry or affiliate links, and the publisher runs no server for it. It does not send your text, or anything else, to the publisher or to anyone else, and it does not sell or share data. The websites you visit still make their own network requests as usual; DraftPebble does not make browsing network-free.</p>
+<p><strong>What DraftPebble stores, and where.</strong> Nothing is saved on a site until you choose Protect this site and allow Firefox's site-access request. After that, DraftPebble stores the following in the browser's extension storage (<code>storage.local</code>) for this browser profile:</p>
+<ul>
+<li>the latest text of each eligible field you type in, up to 20,000 characters per field;</li>
+<li>the exact page address, including any query and fragment (for example https://example.com/form?step=2#notes), which can itself contain identifiers;</li>
+<li>a field identifier (element type, id, name and position) and a label of up to 80 characters taken from the page;</li>
+<li>the time of the last captured edit;</li>
+<li>your settings: whether saving is paused, and the exact site addresses you protected.</li>
+</ul>
+<p>Firefox separately records which sites you allowed access to. DraftPebble does not encrypt any of this, so anyone, or any software, with access to your browser profile may be able to read it. It is not synced between devices and is never uploaded.</p>
+<p>On protected pages DraftPebble shows a count of recoverable drafts on its toolbar button. The count and its tooltip contain no draft text.</p>
+<p><strong>What DraftPebble does not do.</strong> There are no accounts, analytics, telemetry, advertising, tracking, affiliate links, payments or remote code, and no data is sold or shared. The extension makes no network requests of its own, and its pages enforce a content security policy that blocks network connections (<code>connect-src 'none'</code>). Firefox data collection declaration: <code>required ["none"]</code>. This declaration does not mean browsing is network-free.</p>
+<p><strong>Websites&#x27; own traffic.</strong> DraftPebble does not stop websites from making their own network requests and is not a privacy shield. When you restore a draft, DraftPebble puts the text into the page's field and fires the normal input and change events. The website's scripts can then read, save or send that text, exactly as if you had typed it. Firefox and the add-on store may also contact their own services, for example for updates, under their own policies.</p>
+<p><strong>What is skipped.</strong> DraftPebble tries to skip:</p>
+<ul>
+<li>password fields;</li>
+<li>fields whose type, name, label, placeholder or form metadata indicate payment, card, bank, security code, one-time code, account or similar sensitive data;</li>
+<li>fields marked <code>autocomplete="off"</code>;</li>
+<li>disabled and read-only fields;</li>
+<li>anything inside an element marked <code>data-draftpebble-ignore</code>.</li>
+</ul>
+<p>Only text, search, URL, email and telephone inputs and textareas in the main page are saved. Rich-text editors, embedded frames, fields inside shadow DOM and number or other non-text inputs are not saved. Detection reads field metadata, not what you type, so it cannot recognise every private value; an unlabelled sensitive field can still be saved. Only protect sites where storing what you type on this device is appropriate.</p>
+<p><strong>Retention and limits.</strong> Each draft expires seven days after its last captured edit. Expired drafts cannot be restored. They are deleted the next time DraftPebble reads or saves drafts, for example when you open its popup or settings, or load or type on a protected page. There is no background timer, so deletion does not happen at an exact moment.</p>
+<p>At most 200 fields, 20,000 characters per field and 500,000 characters in total are kept. The most recently edited drafts that fit are kept, and longer text is cut. Page addresses over 4,096 characters and field identifiers over 512 characters are not saved. Submitting a form does not delete its draft.</p>
+<p><strong>Your controls and deleting data.</strong></p>
+<ul>
+<li>Pause saving in Settings. Restoring still works while paused.</li>
+<li>Delete one draft in the popup, or delete all saved text in Settings after a confirmation step.</li>
+<li>Stop protecting a site from the popup, or remove site access in Settings. Firefox site access covers every port of a host name, so removing it stops DraftPebble on all of them. Saved drafts stay until you delete them or they expire.</li>
+<li>Uninstalling DraftPebble deletes everything it stored.</li>
+</ul>
+<p><strong>Permissions.</strong> storage keeps drafts and settings in this browser. activeTab reads the current tab's address when you open the popup. scripting runs the bundled capture-and-restore script on a site right after you protect it, and on that site's later page loads. Access to websites (http and https) is optional: it is never granted at install and is requested for one site only when you choose Protect this site. DraftPebble defines no keyboard shortcuts.</p>
+<p><strong>Children.</strong> DraftPebble is not directed at children and collects no personal data from anyone.</p>
+<p><strong>Support emails.</strong> If you email us, we use your message only to answer you, keep it only as long as needed to handle your request, and delete it within 12 months. What you send is handled separately from the extension.</p>
+<p><strong>Changes.</strong> If this policy changes, the effective date above will be updated and the notice will be published at <a href="https://thematheusmello.github.io/factory-legal/form-vault-lite/">https://thematheusmello.github.io/factory-legal/form-vault-lite/</a>.</p>
+<p><strong>Contact.</strong> <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a></p>
+<p>Every DraftPebble feature is free. Saving is best effort, not a backup.</p>
+<p><a href="index.html">DraftPebble</a> · <a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a></p>
+<footer>Published by Matheus da Silveira Mello, individual developer, Portugal · Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a></footer>
+</main>
+</body>
+</html>
