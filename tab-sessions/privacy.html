@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>TabSafe privacy policy</title>
+<meta name="description" content="TabSafe privacy policy">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Matheus Mello · Software</a><nav><a href="../table-export/">GridGrab</a><a href="../contact-extractor/">ContactSift</a><a href="../crate-cram/">Crate Cram</a></nav></div></header>
+<main>
+<h1>TabSafe privacy policy</h1>
+<p>Publisher: Matheus da Silveira Mello<br />
+Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a><br />
+Effective date: 9 November 2026<br />
+Applies to: TabSafe – Session Saver &amp; Tab Backup 0.2.0 for Firefox desktop (Firefox 142 or later).</p>
+<p><strong>Summary.</strong> TabSafe saves open tab URLs, titles, pin state and tab-group data in your browser. It has no account, analytics, advertising, telemetry, cloud upload or sync. Restoring tabs opens those websites, which receive normal browser requests including cookies.</p>
+<p><strong>What is read.</strong> TabSafe reads open tab URLs, titles, pinned state, window order and group names, colours and collapsed state. It does not query the browser history database.</p>
+<p><strong>What is stored.</strong> Sessions, versions, autosaves and trash stay in local IndexedDB. Settings and a pre-close workspace cache stay in local extension storage. There is no product count limit; records remain until you delete them, subject to disk space. Trash expires after 30 days (checked during library access and autosaves). Removing the extension or clearing profile data can erase everything.</p>
+<p><strong>Network.</strong> Apart from website loads you start by restoring or opening saved tabs, TabSafe sends no network requests to the publisher or any third party (extension pages use CSP <code>connect-src 'none'</code>). Restoring a session navigates to each saved site with the browser's normal cookies for that site; that site's privacy policy applies.</p>
+<p><strong>Exports and backups.</strong> JSON exports can include sessions, versions, autosaves and trash; URL exports list addresses from the selected view. Optional daily backups request the Downloads permission when you enable them and write JSON under Downloads/TabSafe/. Denying permission leaves the feature off. Export files remain until you delete them, and device backup tools may copy them — treat them as sensitive browsing information. Disabling backups does not delete existing downloads or revoke permission.</p>
+<p><strong>Import.</strong> Import accepts URL lists or validated TabSafe session JSON up to 10 MiB and rejects unsafe or oversized files. Current JSON import restores sessions only (not exported histories, autosaves or trash). Privileged about: and file: URLs are skipped on restore and counted.</p>
+<p><strong>Permissions.</strong>
+- tabs: read open addresses/titles and restore tabs;
+- tabGroups: save and recreate groups;
+- storage: settings and cache;
+- unlimitedStorage: larger local libraries (subject to disk);
+- alarms: approximate ten-minute autosaves and daily backups;
+- optional downloads: write daily backup files after an explicit grant.
+No host permissions. No registered content scripts.</p>
+<p><strong>Deletion.</strong> Use the library to delete sessions, clear autosaves, delete versions or empty trash. Export before uninstalling.</p>
+<p><strong>Support emails.</strong> If you email us, we use your message only to answer you, keep it only as long as needed to handle your request, and delete it within 12 months.</p>
+<p><strong>Changes.</strong> If this policy changes, the effective date above will be updated.</p>
+<p><strong>Contact.</strong> <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a></p><p><a href="index.html">TabSafe</a> · <a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a></p>
+<footer>Published by Matheus da Silveira Mello, individual developer, Portugal · Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a></footer>
+</main>
+</body>
+</html>
