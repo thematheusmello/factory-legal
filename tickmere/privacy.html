@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tickmere privacy policy</title>
+<meta name="description" content="Tickmere privacy policy">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Matheus Mello · Software</a><nav><a href="../table-export/">GridGrab</a><a href="../contact-extractor/">ContactSift</a><a href="../crate-cram/">Crate Cram</a></nav></div></header>
+<main>
+<h1>Tickmere privacy policy</h1>
+<p>Publisher: Matheus da Silveira Mello<br />
+Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a><br />
+Effective date: 12 November 2026<br />
+Applies to: Tickmere 1.0.0 for Firefox desktop (Firefox 140 or later).</p>
+<p><strong>Summary.</strong> Tickmere is a free page-measurement add-on for desktop Firefox. It draws rulers, inspects element spacing and copies measured CSS. It has no accounts, payments, ads, analytics, telemetry or affiliate links, and the publisher runs no server for it. It does not send measurements, page content or anything else to the publisher or to anyone else, and it does not sell or share data. The websites you visit still make their own network requests as usual; Tickmere does not make browsing network-free.</p>
+<p><strong>When it runs.</strong> Nothing runs in a page until you open the Tickmere toolbar popup and choose Toggle ruler on this page. The optional Alt+Shift+M shortcut only opens that popup; it does not inject the overlay by itself. The overlay lasts until you press Escape, choose close, invoke Tickmere again or leave the page, and applies only to that tab.</p>
+<p><strong>What Tickmere reads.</strong> While the overlay is open, Tickmere reads, in that tab's top document only:</p>
+<ul>
+<li>element geometry (sizes and positions) of rulers you draw and of elements you inspect or snap to;</li>
+<li>computed layout styles of those elements (margin, border, padding, box-sizing) and the root font size, used for rem units;</li>
+<li>no form values, no browsing history, and no iframe contents or closed page shadow trees.</li>
+</ul>
+<p>These values stay in the tab's memory and appear only in the Tickmere overlay. They are never stored, never sent to the publisher and never shared with anyone. Closing the overlay removes it and every listener; leaving the page discards everything.</p>
+<p><strong>What Tickmere stores.</strong> One setting, in the browser's local extension storage (<code>storage.local</code>) for this browser profile: your validated ruler colour. It is never synced and is never uploaded. Missing, invalid or unavailable storage uses cyan. Uninstalling Tickmere removes it. No measurements, addresses, history or copied CSS are stored.</p>
+<p><strong>Clipboard.</strong> When you click Copy CSS, Tickmere writes the measured width and height as CSS to your clipboard. It never reads the clipboard. If clipboard access is denied, it shows the same text in a selectable field instead. How long clipboard content is kept depends on your operating system and any clipboard manager you use. Tickmere does not take screenshots or capture page images.</p>
+<p><strong>What Tickmere does not do.</strong> There are no accounts, analytics, telemetry, advertising, tracking, affiliate links, payments or remote code, and no data is sold or shared. Tickmere itself makes no network requests, and its pages enforce a content security policy that blocks network connections (<code>connect-src 'none'</code>). Firefox data collection declaration: <code>required ["none"]</code>. This declaration does not mean browsing is network-free.</p>
+<p><strong>Websites&#x27; own traffic.</strong> Tickmere does not stop websites from making their own network requests (including their analytics and advertising) and is not a privacy shield. Firefox and the add-on store may also contact their own services, for example for updates, under their own policies.</p>
+<p><strong>Permissions.</strong> activeTab grants access to the tab you are on when you click the toolbar button. scripting adds the measuring overlay to that tab when you choose Toggle ruler on this page. storage keeps the colour setting described above. Tickmere has no host permissions and cannot run on browser pages or add-on stores. It defines one optional keyboard shortcut, Alt+Shift+M, which only opens the popup.</p>
+<p><strong>Children.</strong> Tickmere is not directed at children and collects no personal data from anyone.</p>
+<p><strong>Your rights.</strong> Tickmere does not collect personal data, so there is nothing to access, export, correct or delete beyond uninstalling the add-on (which removes the colour setting).</p>
+<p><strong>Support emails.</strong> If you email us, we use your message only to answer you, keep it only as long as needed to handle your request, and delete it within 12 months. What you send is handled separately from the extension.</p>
+<p><strong>Changes.</strong> If this policy changes, the effective date above will be updated and the notice will be published at <a href="https://thematheusmello.github.io/factory-legal/tickmere/">https://thematheusmello.github.io/factory-legal/tickmere/</a>.</p>
+<p><strong>Contact.</strong> <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a></p>
+<p>Every Tickmere feature is free. Measurements are CSS pixels and are provided as a practical aid, not a certification.</p>
+<p><a href="index.html">Tickmere</a> · <a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a></p>
+<footer>Published by Matheus da Silveira Mello, individual developer, Portugal · Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a></footer>
+</main>
+</body>
+</html>

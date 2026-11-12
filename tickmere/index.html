@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Tickmere</title>
+<meta name="description" content="Tickmere">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Matheus Mello · Software</a><nav><a href="../table-export/">GridGrab</a><a href="../contact-extractor/">ContactSift</a><a href="../crate-cram/">Crate Cram</a></nav></div></header>
+<main>
+<h1>Tickmere</h1>
+<p>Tickmere is a free Firefox desktop add-on that measures the space on a web page. Draw pixel rulers, inspect an element's box model, drop alignment guides, and copy the measured CSS. Everything stays on your device.</p>
+<ul>
+<li>Open Tickmere from the toolbar and choose Toggle ruler on this page. Nothing runs in a page until you do. Alt+Shift+M opens the same popup; it does not inject the overlay by itself.</li>
+<li>Draw as many rulers as you need, move and resize them, and extend guides from their edges. Snap to visible element edges, or turn snap off. Switch units between CSS px, rem and viewport percentages.</li>
+<li>Inspect shows an element's margin, border, padding and content. Click to pin it, then hold Shift over another element to compare horizontal and vertical gaps or overlaps.</li>
+<li>Copy CSS writes the measured width and height as a ready-to-paste block. If the browser denies clipboard access, Tickmere shows selectable text instead. It never reads the clipboard.</li>
+<li>Choose a line colour that suits the page; that preference stays in local extension storage. Escape, the close button, a second invocation or leaving the page removes the overlay and every listener.</li>
+</ul>
+<p>Every feature is free. No account, no ads, no analytics, no affiliate links and no payments.</p>
+<p><strong>Privacy.</strong> Measurements stay in the tab while the overlay is open and are never stored or transmitted. The only stored setting is your ruler colour; it stays in local extension storage and is never synced. Tickmere itself makes no network requests and uses <code>connect-src 'none'</code>. Websites you visit still make their own traffic (analytics, ads); Tickmere does not block or change that. See the <a href="privacy.html">privacy policy</a>.</p>
+<p><strong>Limits.</strong> Desktop Firefox 140 or later only. Not for Firefox for Android. No Chrome, Edge, Opera or Whale support is claimed. Values are CSS pixels, not device pixels (devicePixelRatio is shown; browser zoom changes that relationship). Rem uses the root font size; percentages use the viewport, and copied percentage CSS uses vw/vh. Transformed elements use axis-aligned visual bounds; rotation and skew are approximate. Tickmere measures the top document only: iframe contents, closed page shadow trees and protected browser pages cannot be inspected. Copied CSS is the measured width and height and does not include margin. Continuous page animation is not sampled continuously. There is no screenshot capture or PNG export. Browser pages and add-on stores cannot be measured.</p>
+<h2>Support</h2>
+<p>Questions or bug reports: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a>. Please mention "Tickmere".</p>
+<p><a href="index.html">Tickmere</a> · <a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a></p>
+<footer>Published by Matheus da Silveira Mello, individual developer, Portugal · Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a></footer>
+</main>
+</body>
+</html>
