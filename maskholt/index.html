@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Maskholt</title>
+<meta name="description" content="Maskholt is a free Firefox desktop add-on that lets you pick a browser or device identity for a site, a tab, or every site, with saved choices that stay on your device.">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Matheus Mello · Software</a><nav><a href="../table-export/">GridGrab</a><a href="../contact-extractor/">ContactSift</a><a href="../crate-cram/">Crate Cram</a></nav></div></header>
+<main>
+<h1>Maskholt</h1>
+<p>Maskholt is a free Firefox desktop add-on that lets you pick a browser or device identity for a site, a tab, or every site. It changes both the User-Agent sent to the website and the legacy navigator values page scripts can see. Everything stays on your device.</p>
+<ul>
+<li>Keep a choice for a site, including its subdomains, after quitting and reopening Firefox. Choose an every-site identity after a clear confirmation, and keep it after a restart.</li>
+<li>Try an identity in this tab on this site. A this-tab-only choice ends when the tab closes or leaves the site, and does not survive a restart.</li>
+<li>Restore the selected scope in one click. Restoring every site clears all assignments. The library asks before deleting an identity or restoring everything.</li>
+<li>Edit, delete, or add identities in a small, dated library. Export and import your saved choices as local Maskholt JSON. A short toolbar badge shows when a different identity is in force.</li>
+</ul>
+<p>Every feature is free. No account, no ads, no analytics, no affiliate links and no payments.</p>
+<p><strong>Privacy.</strong> Presets, custom identity fields, site and every-site assignments and the last scope stay in local extension storage and are never synced. Tab-only choices use session storage and expire when the tab closes, leaves the site, or the browser session ends. Maskholt itself makes no network requests and uses <code>connect-src 'none'</code>. When an identity is in force, websites you visit receive the User-Agent you chose as part of ordinary browsing, and page scripts can see the chosen legacy navigator fields. See the <a href="privacy.html">privacy policy</a>.</p>
+<p><strong>Limits.</strong> Desktop Firefox 128 or later only. Not for Firefox for Android. No Chrome, Edge, Opera or Whale support is claimed in this Firefox listing. This is not device emulation, a proxy, or fingerprint protection. Chromium Client Hints and <code>navigator.userAgentData</code> are outside this Firefox kit. Browser-protected pages and workers are not covered. Page scripts can detect or change navigator overrides. A site that rewrites <code>window.name</code> can interrupt a tab-only choice; reapply it or use a site choice. Website access is requested when you apply a scope. A fresh install changes nothing.</p>
+<h2>Support</h2>
+<p>Questions or bug reports: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a>. Please mention "Maskholt".</p>
+<p><a href="index.html">Maskholt</a> · <a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a></p>
+<footer>Published by Matheus da Silveira Mello, individual developer, Portugal · Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a></footer>
+</main>
+</body>
+</html>
