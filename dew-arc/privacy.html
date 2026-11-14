@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dewlit Arc privacy policy</title>
+<meta name="description" content="Dewlit Arc privacy policy">
+<link rel="stylesheet" href="../style.css">
+</head>
+<body>
+<header class="site"><div><a href="../index.html">Matheus Mello · Software</a><nav><a href="../table-export/">GridGrab</a><a href="../contact-extractor/">ContactSift</a><a href="../crate-cram/">Crate Cram</a><a href="../lantern-lift/">Lantern Lift</a><a href="../spice-shelf/">Spice Shelf Sort</a><a href="../origami-canal/">Origami Canal</a><a href="../pebble-pairs/privacy.html">Pebble Pairs</a><a href="../canopy-gecko/privacy.html">Canopy Gecko</a><a href="../noodle-nook/privacy.html">Noodle Nook Idle</a><a href="../sprout-guard/privacy.html">Sprout Guard Merge</a><a href="../word-loom/privacy.html">Word Loom</a><a href="../drip-line/privacy.html">Drip Line</a><a href="../stackwise-trivia/privacy.html">Stackwise Trivia</a><a href="../chalk-claim/privacy.html">Chalk Claim</a><a href="../hive-sort/privacy.html">Waxwhirl</a><a href="../bakery-rush/privacy.html">Bakery Rush</a><a href="../moss-roll/privacy.html">Mosswheel Gardens</a><a href="../cobble-court/privacy.html">Cobble Court</a><a href="../plank-parlor/privacy.html">Plank Parlor</a><a href="../dew-arc/privacy.html">Dewlit Arc</a></nav></div></header>
+<main>
+<h1>Dewlit Arc privacy policy</h1>
+<p class="muted">Effective date: 14 November 2026</p>
+<p>Dewlit Arc is an HTML5 aim-and-pop bubble shooter published by Matheus da Silveira Mello, an individual developer based in Portugal (contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a>). The
+game is played on third-party game platforms (“platforms”), such as CrazyGames and YouTube Playables, and as a local build.</p>
+
+<h2>Summary</h2>
+<ul>
+<li>The game does not ask for a name, email, birthday or game account and does not assign a tracking identifier. There are no purchases.</li>
+<li>The game has no analytics, game server or advertising requests. Live ads are disabled.</li>
+<li>Your progress is saved on your device or through the platform’s save feature.</li>
+<li>Sharing a challenge is voluntary; the link contains only a seed, claimed score, shot count, garden type and level.</li>
+</ul>
+
+<h2>Save data</h2>
+<p>To let you continue, the game saves a small versioned JSON record: best score, unlocked garden level, completion and tutorial flags,
+lifetime counts of cleared gardens, shots, popped and dropped beads, latest daily date, score, shots and win status, music and sound-effect on/off and volume settings,
+and the current run (seed, deterministic random state, mode, level, board, current and next bead, bead flight, score, shots, elapsed time, mist descent,
+miss pressure, combo, breeze, play/win/loss status, bead-swap flag and any challenge target).
+The local build uses browser <code>localStorage</code> under <code>dew-arc</code>. The CrazyGames build uses its SDK Data module under the same key.
+The YouTube Playables build uses host SDK storage and submits the same integer personal best kept in the save after saving, when the host is not paused;
+outside the actual Playables host, its adapter may use local browser storage. The save contains no name, contact details or account identifier and is not sent to the publisher.</p>
+<p>Browser-local saves remain until you or your browser clear the game’s site data. Clear site storage in your browser settings to remove the local
+run, scores, progression and settings. Platform saves follow the platform’s storage and account controls. The game cannot access or delete the platform’s account data;
+contact the platform for those controls.</p>
+
+<h2>Challenges</h2>
+<p>On the local and CrazyGames builds, an explicit challenge action after a run shows selectable text with a link containing the starting seed, claimed score,
+shot count, garden type and level in its URL fragment. Sharing is voluntary and performed by you. No name or account ID is included. Anyone with the link can
+replay the garden and see the target score and shots; these claims are not authenticated. Select text only highlights the text; you copy it yourself with your
+device’s usual controls. The game never reads or writes the clipboard and does not use Web Share. Incoming challenge fragments are validated and processed locally;
+any target used in a run is included in that run’s save. The YouTube Playables build accepts incoming challenge seeds but has no sharing controls or clipboard access.</p>
+<p>The daily garden derives its seed from your device’s UTC calendar date. No location or time service is contacted.</p>
+
+<h2>Platforms and ads</h2>
+<p>Only the selected portal SDK is loaded remotely; local play uses bundled resources only. Art and audio are generated locally and text uses your device’s fonts.
+The game makes no advertising requests; live ads are disabled. The optional one-use bead swap per garden is a free test reward and does not contact an ad service.
+The YouTube Playables build may tell the host that an error or warning occurred, with no details attached. Platforms and browsers may independently process account, device,
+connection and platform-storage information under their own privacy policies — for example
+<a href="https://www.crazygames.com/privacy-policy">CrazyGames</a> and <a href="https://policies.google.com/privacy">Google/YouTube</a>.
+This policy does not describe or override their independent processing.</p>
+
+<h2>Permissions</h2>
+<p>The game does not request camera, microphone, location, contacts, push notifications, sign-in or payment permissions.
+Web Audio synthesizes music and sound effects locally after interaction, respecting your audio preferences and host pause and audio restrictions; it does not record audio.
+The game uses no clipboard or Web Share access; you copy challenge text yourself on supported builds.</p>
+
+<h2>Children</h2>
+<p>Dewlit Arc is intended for a general audience aged 13 and over and is not directed at children.</p>
+
+<h2>Your rights and contact</h2>
+<p>If you email me, I use your email only to answer you and keep the conversation only as long as needed. You can ask for access,
+correction or deletion of personal data I hold by writing to <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a>. You may complain to the Portuguese data protection authority,
+the Comissão Nacional de Proteção de Dados (<a href="https://www.cnpd.pt">cnpd.pt</a>), or the authority in your country.</p>
+
+<h2>Changes</h2>
+<p>Updates to this policy will be published on this page with a new effective date.</p>
+<p><a href="index.html">Dewlit Arc</a> · <a href="privacy.html">Privacy policy</a> · <a href="terms.html">Terms of use</a></p>
+<footer>Published by Matheus da Silveira Mello, individual developer, Portugal · Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a></footer>
+</main>
+</body>
+</html>
