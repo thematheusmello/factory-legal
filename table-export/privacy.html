@@ -12,27 +12,37 @@
 <main>
 <h1>Sheetkeel privacy policy</h1>
 <p class="muted">Effective date: 8 November 2026</p>
+<p class="muted">Updated 15 November 2026</p>
 <p>Sheetkeel was previously called GridGrab.</p>
 <p>This policy explains how the Sheetkeel – Table &amp; List to CSV/Excel browser extension (“Sheetkeel”) handles information. Sheetkeel is published by
 Matheus Mello, an individual developer based in Portugal (“I”, “me”). Contact: <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a>.</p>
 
 <h2>Scope and free use</h2>
-<p>This policy covers the Sheetkeel editions for Chrome and Firefox. Both are free, work locally and require no account. Neither edition uploads extracted data or makes extension-initiated network requests. There is no analytics, advertising, telemetry or remotely loaded executable code. Normal website activity and browser-managed services remain subject to their own policies.</p>
+<p>This policy covers the Sheetkeel editions for Chrome and Firefox. Both are free, work locally and require no account; there is no Pro plan and no daily export cap. Neither edition uploads extracted data or makes extension-initiated network requests. There is no analytics, advertising, telemetry or remotely loaded executable code. Normal website activity and browser-managed services remain subject to their own policies.</p>
 <h2>Page access and processing</h2>
 <p>Opening Sheetkeel lets its bundled code detect tables and repeated lists in the selected tab. It reads page text and, for lists, link and image URL values; it does not fetch those URLs. Detection uses visibility checks, but text inside a selected cell can include descendant text. Preview and selected rows are held in popup memory, rather than saved as page content in extension storage.</p>
-<p>Both editions request only <code>activeTab</code>, <code>scripting</code> and <code>storage</code>, with no standing website host permissions. These allow temporary access to the selected tab, execution of the bundled reader and local preferences and usage storage. Regular HTTP/HTTPS pages are supported; local file access depends on browser permission. Browser and store pages may block access.</p>
-<h2>Chrome and Firefox differences</h2>
-<p>Both editions can outline and scroll to a candidate on the page. These inline style changes can be observed by the page’s own scripts; extracted rows are not inserted into the page.</p>
+<p>Both editions request only <code>activeTab</code>, <code>scripting</code> and <code>storage</code>, with no standing website host permissions. These allow temporary access to the selected tab, execution of the bundled reader, and local storage of preferences, taught Next-page selectors and review-prompt state. Regular HTTP/HTTPS pages are supported; local file access depends on browser permission. Browser and store pages may block access.</p>
+<h2>Chrome and Firefox editions</h2>
+<p>The Chrome and Firefox editions share the same behaviour. Both can outline and scroll to a candidate on the page. These inline style changes can be observed by the page’s own scripts; extracted rows are not inserted into the page.</p>
 <ul>
-<li><strong>Firefox:</strong> when the popup connection closes, the content script removes the highlight, restores the previous outline styles and drops its candidate references. Private browsing is disabled by the manifest. Persistent extension storage contains only the CSV delimiter, UTF-8 BOM preference and UTC daily export date/count.</li>
-<li><strong>Chrome:</strong> the content script has no corresponding popup-close cleanup. Its candidate references and last outline can remain until the document is unloaded, such as on navigation or reload. The manifest does not disable private browsing; access there depends on browser settings. Its local usage counter is not isolated by session type, so do not assume a separate private-session counter. Normal use stores the delimiter, BOM preference and UTC daily export date/count. Chrome also contains local storage handling for site-origin/selector settings; these are not extracted rows, and any existing entries can be removed in settings.</li>
+<li><strong>Popup-close cleanup:</strong> in both editions, when the popup connection closes, the content script removes the highlight, restores the previous outline styles and drops its candidate references.</li>
+<li><strong>Private windows:</strong> both manifests disable the extension in private / Incognito windows.</li>
+<li><strong>Storage:</strong> both editions store the same local keys, described under “Retention and control” below.</li>
+<li><strong>Firefox declaration:</strong> the desktop Firefox edition declares that it collects no data.</li>
 </ul>
 <h2>Limits, clipboard and downloads</h2>
-<p>Both editions allow unlimited TSV copying for Excel or Sheets and a combined five CSV, XLSX, Markdown or JSON exports per UTC day, resetting at 00:00 UTC. CSV and XLSX are generated locally as downloads; TSV, Markdown and JSON are written to the clipboard only when you select the corresponding action. Neither edition reads your clipboard. Chrome consumes the export count before output and does not restore it on failure; Firefox attempts to restore the count if output throws an error.</p>
+<p>Both editions allow unlimited TSV, CSV, XLSX, Markdown and JSON exports, with no daily export cap or row limit. CSV and XLSX are generated locally as downloads; TSV, Markdown and JSON are written to the clipboard only when you select the corresponding action. Neither edition reads your clipboard.</p>
 <p>Download filenames include the source host name (or “page” when absent) and date. The browser may retain download history. Files and clipboard copies can contain sensitive source data and remain wherever you save or paste them; uninstalling Sheetkeel does not remove those copies.</p>
 <p>Review untrusted page data before opening or pasting it into a spreadsheet. Spreadsheet applications may interpret some cell values as formulas; do not assume every installed edition neutralises those values.</p>
 <h2>Retention and control</h2>
-<p>Extension storage uses <code>chrome.storage.local</code> in the browser profile, with no extension-managed sync. Local preferences and counters remain until replaced, the extension’s local data is cleared or the extension is uninstalled. Chrome’s selector-removal controls do not clear all extension data. Firefox settings change CSV preferences; they do not provide a general data-clear button. Popup memory ends when the popup closes; Chrome’s page-side references have the longer lifetime described above.</p>
+<p>Extension storage uses <code>chrome.storage.local</code> in the browser profile, with no extension-managed sync. In both editions it holds only:</p>
+<ul>
+<li>CSV preferences: the delimiter and the UTF-8 BOM setting;</li>
+<li>taught Next-page selectors, saved per site origin (a selector for the page’s Next control, not extracted rows);</li>
+<li>review-prompt state: a count of successful exports in any format, including TSV, and a flag recording that you dismissed the prompt. After three successful exports a dismissible review link may appear; it never opens automatically. This count never limits exports and has no daily reset.</li>
+</ul>
+<p>Extracted table and list rows are not saved in extension storage. A profile upgraded from version 0.1.1 may still contain that version’s daily-use data; the current version neither reads nor updates it. The welcome tab opens only on first install, and no install or welcome flag is stored.</p>
+<p>Stored values remain until replaced, the extension’s local data is cleared or the extension is uninstalled. In Settings, “Forget saved Next buttons” removes the saved Next-page selectors; it does not clear the other keys. There is no general clear-all control in the extension. Popup memory ends when the popup closes, and in both editions page-side highlights and candidate references are removed when the popup connection closes. Uninstalling removes extension storage but not files you downloaded or clipboard copies.</p>
 <h2>Developer contact and your rights</h2>
 <p>I do not receive the data processed locally by the extension. If you email me, I receive the information you choose to send and use it to answer and handle your request, retaining it only as needed for that purpose or applicable legal obligations. Do not send extracted data unless it is needed for your request and you are entitled to share it. I do not sell personal data or share it for advertising.</p>
 <p>For personal data I hold, you may request access, correction, deletion, restriction, objection or portability where applicable by contacting <a href="mailto:matheus.mello.developer@gmail.com">matheus.mello.developer@gmail.com</a>. You may complain to the Portuguese data protection authority, the Comissão Nacional de Proteção de Dados (<a href="https://www.cnpd.pt">cnpd.pt</a>), or your local authority.</p>
